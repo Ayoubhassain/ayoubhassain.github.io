@@ -4,6 +4,7 @@ import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getSkillCategories } from "@/i18n/skill-categories";
 import { buildPageMetadata } from "@/lib/site-metadata";
+import { withBasePath } from "@/lib/base-path";
 import PageContainer from "@/components/layout/PageContainer";
 import SectionHeader from "@/components/ui/SectionHeader";
 import SkillsGrid from "@/components/ui/SkillsGrid";
@@ -43,23 +44,33 @@ export default async function AboutPage({ params }: PageProps) {
         subtitle={t.about.subtitle}
       />
 
-      <div className="max-w-2xl space-y-6 text-lg leading-relaxed text-ink-muted">
-        {t.profile.bio.split("\n\n").map((para) => (
-          <p key={para.slice(0, 24)}>{para}</p>
-        ))}
-        <p>
-          {t.about.basedIn}{" "}
-          {t.profile.location}
-          {". "}
-          {t.about.reachMe}{" "}
-          <a
-            href={`mailto:${t.profile.email}`}
-            className="text-accent underline underline-offset-4 transition-colors hover:text-accent-hover"
-          >
-            {t.profile.email}
-          </a>
-          .
-        </p>
+      <div className="grid items-start gap-10 md:grid-cols-[1fr_auto] md:gap-16">
+        <div className="max-w-2xl space-y-6 text-lg leading-relaxed text-ink-muted">
+          {t.profile.bio.split("\n\n").map((para) => (
+            <p key={para.slice(0, 24)}>{para}</p>
+          ))}
+          <p>
+            {t.about.basedIn}{" "}
+            {t.profile.location}
+            {". "}
+            {t.about.reachMe}{" "}
+            <a
+              href={`mailto:${t.profile.email}`}
+              className="text-accent underline underline-offset-4 transition-colors hover:text-accent-hover"
+            >
+              {t.profile.email}
+            </a>
+            .
+          </p>
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={withBasePath("/ayoub-hassain.jpg")}
+          alt={t.profile.photoAlt}
+          width={640}
+          height={800}
+          className="w-48 rounded-3xl border border-border object-cover shadow-sm md:w-64"
+        />
       </div>
 
       <div className="mt-16">
