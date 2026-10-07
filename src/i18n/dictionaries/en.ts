@@ -109,8 +109,7 @@ export const en: Dictionary = {
     email:    "ayoubhassain2233@gmail.com",
     stack: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
     spokenLanguages: [
-      { name: "Arabic",  level: "Native" },
-      { name: "French",  level: "Bilingual" },
+      { name: "French",  level: "Native" },
       { name: "English", level: "Professional (C1)" },
       { name: "German",  level: "Basic (A2)" },
     ],
