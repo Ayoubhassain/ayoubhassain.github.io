@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* White canvas, sans-serif, navy accent (same blue as the CV) */
+@theme {
+  --color-bg:          #ffffff;
+  --color-bg-subtle:   #f6f6f6;
+  --color-surface:     #111111;
+  --color-border:      #e8e8e8;
+  --color-ink:         #111111;
+  --color-ink-muted:   #5c5c5c;
+  --color-ink-light:   #8a8a8a;
+  --color-accent:      #1f3864;
+  --color-accent-hover:#2c4d85;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), "Courier New", monospace;
+}
+
+/* Night mode — same semantic tokens, darker palette */
+.dark {
+  --color-bg:          #0c0c0c;
+  --color-bg-subtle:   #161616;
+  --color-surface:     #f5f5f5;
+  --color-border:      #2a2a2a;
+  --color-ink:         #f0f0f0;
+  --color-ink-muted:   #a3a3a3;
+  --color-ink-light:   #737373;
+  --color-accent:      #8fb0e8;
+  --color-accent-hover:#a9c3ef;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+}
+
+::selection {
+  background-color: #d5deef;
+  color: #111111;
+}
+
+.dark ::selection {
+  background-color: #24365a;
+  color: #f0f0f0;
+}
+
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--color-bg); }
+::-webkit-scrollbar-thumb  { background: #d4d4d4; border-radius: 9999px; }
+
+.dark::-webkit-scrollbar-thumb,
+.dark *::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+}

@@ -1,0 +1,224 @@
+import type { Dictionary } from "../types";
+import { links } from "./en";
+
+export const fr: Dictionary = {
+  pageMeta: {
+    home: {
+      title: "Ayoub Hassain — Ingénieur Full Stack & DevOps",
+      description:
+        "Ingénieur ENSEEIHT : je développe des applications web de la base de données à l'interface, et je les mets en production avec tests, CI/CD, Docker et Kubernetes.",
+    },
+    about: {
+      title: "À propos — Ayoub Hassain",
+      description:
+        "Ingénieur full stack et DevOps diplômé de l'ENSEEIHT, basé à Paris. Angular, Node.js, Java/Spring Boot, Docker, Kubernetes.",
+    },
+    projects: {
+      title: "Projets — Ayoub Hassain",
+      description:
+        "Projets sélectionnés : cluster Spark sur GCP avec Terraform et Ansible, plateforme e-commerce Spring Boot et Angular, API REST Node.js, et benchmark conteneurs vs MicroVMs.",
+    },
+    resume: {
+      title: "CV — Ayoub Hassain",
+      description:
+        "Expérience, formation, projets et compétences — Padoa, Banque Centrale Populaire et SQLI.",
+    },
+    qanda: {
+      title: "Questions & Réponses — Ayoub Hassain",
+      description:
+        "Ma façon de travailler, ce que j'aime construire et ce que je recherche.",
+    },
+  },
+  nav: {
+    about:     "À propos",
+    projects:  "Projets",
+    resume:    "CV",
+    qanda:     "Q&R",
+    themeLight: "Passer en mode clair",
+    themeDark:  "Passer en mode nuit",
+  },
+  home: {
+    tagline:        "Ingénieur Full Stack & DevOps",
+    proofPoint:
+      "Récemment : stage de fin d'études chez Padoa, sur une plateforme SaaS en production — nouvelles fonctionnalités en Angular et Node.js, tests E2E avec Playwright, et CI/CD jusqu'au déploiement Kubernetes.",
+    locationLine:   "Paris · ENSEEIHT · Disponible à partir de novembre 2026",
+    viewProjects:   "Voir mes projets",
+    downloadResume: "Télécharger mon CV",
+    contactMe:      "Me contacter",
+    inDepth:        "À découvrir",
+    project:        "Projet",
+    focusedOn:      "Ce que je fais",
+  },
+  about: {
+    label:          "À propos",
+    title:          "À propos",
+    subtitle:       "Qui je suis, ce que je fais, et avec quoi je travaille.",
+    basedIn:        "Basé à",
+    reachMe:        "Me contacter :",
+    writeOn:        "",
+    writeOnSuffix:  "",
+    skills:         "Compétences",
+    languages:      "Langues",
+  },
+  projectsPage: {
+    label:    "Projets",
+    title:    "Mes projets",
+    subtitle: "Infrastructure, applications web et API — projets académiques et personnels.",
+  },
+  resume: {
+    label:      "CV",
+    title:      "CV",
+    subtitle:   "Expérience, formation, projets et compétences.",
+    experience: "Expérience",
+    education:  "Formation",
+    projects:   "Projets",
+    skills:     "Compétences",
+    downloadEn: "↓ EN",
+    downloadFr: "↓ FR",
+    live:       "Démo",
+  },
+  qandaPage: {
+    label:    "Q&R",
+    title:    "Questions & Réponses",
+    subtitle: "Les questions que les recruteurs me posent souvent, et mes réponses.",
+  },
+  projectCard: {
+    problem:  "L'objectif",
+    built:    "Ce que j'ai fait",
+    learned:  "Ce que j'en retiens",
+    github:   "GitHub",
+    liveDemo: "Voir la démo",
+  },
+  profile: {
+    name:     "Ayoub Hassain",
+    title:    "Ingénieur Full Stack & DevOps",
+    headline:
+      "Ingénieur ENSEEIHT. Je développe des applications web de la base de données à l'interface, et je les mets en production avec tests, CI/CD et Kubernetes.",
+    bio:
+      "Ingénieur en informatique et télécommunications diplômé de l'ENSEEIHT (Toulouse INP), filière Infrastructure et Big Data. Au fil de trois expériences, j'ai conçu et fait évoluer des applications web des deux côtés : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Chez Padoa, j'ai aussi travaillé sur ce qui se passe après le code : tests E2E automatisés, pipelines CI, déploiements Docker et Kubernetes, supervision en production. Je recherche un CDI à partir de novembre 2026, et je m'intéresse à l'IA et à la façon dont elle change le développement logiciel.",
+    location: "Paris, France",
+    email:    "ayoubhassain2233@gmail.com",
+    focus: ["Full stack (Angular, Node.js, Java)", "CI/CD et Kubernetes", "Tests automatisés", "Infrastructure as Code"],
+    spokenLanguages: [
+      { name: "Français", level: "Langue maternelle" },
+      { name: "Anglais",  level: "Professionnel (C1)" },
+      { name: "Allemand", level: "Notions (A2)" },
+    ],
+  },
+  experience: [
+    {
+      role: "Développeur Full Stack / DevOps — stage de fin d'études",
+      company: "Padoa",
+      period: "Mars 2026 – Sept. 2026",
+      description:
+        "Nouvelles fonctionnalités d'une plateforme SaaS de santé au travail en production (Angular/RxJS, TypeScript, Node.js/Express, PostgreSQL), en équipe Agile/Scrum. Migration des formes juridiques vers le système de listes de référence : évolution du modèle de données, adaptation backend/frontend et reprise des données via scripts SQL. Interface de gestion de modèles de devis Word. Tests E2E Playwright sur les parcours métier (fixtures, Page Objects). CI/CD avec GitHub Actions, Docker et déploiement Kubernetes via Helm et Argo CD. Revues de code et correction d'anomalies en production (logs, Prometheus/Grafana).",
+    },
+    {
+      role: "Développeur Full Stack — stage",
+      company: "Banque Centrale Populaire",
+      period: "Juin 2025 – Sept. 2025",
+      description:
+        "Conception et développement d'une application de gestion des chèques pour l'équipe comptabilité de la banque, avec un backend Java/Spring Boot et un frontend Angular. Création, recherche, modification et suivi des chèques, avec scan, impression calibrée et montants en lettres. API REST, persistance MySQL avec JPA/Hibernate, intégration continue (tests, build Maven, image Docker) et déploiement sur serveur (Tomcat/Nginx).",
+    },
+    {
+      role: "Développeur Front-End — stage",
+      company: "SQLI",
+      period: "Juil. 2024 – Sept. 2024",
+      description:
+        "Interfaces Angular/TypeScript pour une application RH interne : formulaires, affichage dynamique et intégration d'API REST. Participation aux tests, corrections d'anomalies et évolutions fonctionnelles au sein de l'équipe projet.",
+    },
+  ],
+  education: [
+    {
+      role: "Diplôme d'ingénieur en informatique et télécommunications",
+      company: "Toulouse INP – ENSEEIHT",
+      period: "2023 – 2026",
+      description:
+        "Java, C++, conception orientée objet, bases de données, réseaux, cloud. Filière Infrastructure et Big Data.",
+    },
+    {
+      role: "Classes préparatoires MPSI – MP*",
+      company: "Lycée Mohammed VI d'Excellence, Benguérir",
+      period: "2021 – 2023",
+      description:
+        "Préparation intensive en mathématiques, physique et informatique aux concours des grandes écoles d'ingénieurs.",
+    },
+  ],
+  projects: [
+    {
+      id: "spark-cluster-gcp",
+      title: "Cluster Spark sur GCP",
+      description: "Un cluster Apache Spark déployé de zéro sur Google Cloud, avec Terraform et Ansible.",
+      problem:
+        "Rendre un cluster de calcul distribué reproductible : passer d'un projet cloud vide à un job Spark qui tourne, sans étape manuelle, en gardant les nœuds de calcul hors d'internet.",
+      solution:
+        "Terraform crée les VM, le VPC et un sous-réseau privé sur GCP. Ansible installe ensuite Java et Spark, configure le master et les workers, et monte un stockage NFS partagé. Le cluster est validé avec un job WordCount : 28 s avec un exécuteur, 19 s avec deux.",
+      learned:
+        "L'Infrastructure as Code de bout en bout : séparer le provisioning de la configuration, isoler les nœuds dans un réseau privé, et reconstruire tout un cluster en une commande.",
+      stack: ["GCP", "Terraform", "Ansible", "Apache Spark", "NFS", "Linux"],
+      github: links.github + "/spark-cluster-gcp",
+    },
+    {
+      id: "ecommerce-fullstack",
+      title: "Plateforme e-commerce",
+      description: "Une application e-commerce full stack : API REST Spring Boot et frontend Angular.",
+      problem:
+        "Construire une application web complète, du modèle de données à l'interface, avec de vraies fonctionnalités : comptes, catalogue, panier, commandes et espace administrateur.",
+      solution:
+        "Une API REST Spring Boot avec JPA/Hibernate et PostgreSQL, et un frontend Angular. Authentification, catalogue et recherche, panier et commandes, espace administrateur pour gérer produits et commandes.",
+      learned:
+        "Concevoir l'API et le modèle de données en premier, pour que le frontend reste simple et que chaque fonctionnalité s'intègre proprement.",
+      stack: ["Java", "Spring Boot", "JPA/Hibernate", "Angular", "TypeScript", "PostgreSQL"],
+      github: links.github + "/ecommerce-fullstack",
+    },
+    {
+      id: "pokemon-rest-api",
+      title: "API REST Pokémon",
+      description: "Une API REST en Node.js et Express, avec authentification JWT, validation et tests d'intégration.",
+      problem:
+        "Écrire une API qui ne soit pas seulement fonctionnelle mais propre : routes protégées, données validées, endpoints testés, et une installation que tout le monde peut lancer.",
+      solution:
+        "Une API CRUD en Node.js/Express avec PostgreSQL. Les routes sont protégées par JWT, les données sont validées avant d'atteindre la base, et des tests d'intégration couvrent les principaux endpoints. Le tout se lance avec Docker Compose.",
+      learned:
+        "À quel point les tests et la validation changent la confiance qu'on a dans une API, et pourquoi une installation Docker en une commande compte pour le développeur suivant.",
+      stack: ["Node.js", "Express", "PostgreSQL", "JWT", "Docker"],
+      github: links.github + "/pokemon-rest-api",
+    },
+    {
+      id: "serverless-containers-vs-microvms",
+      title: "Serverless : conteneurs vs MicroVMs",
+      description: "Un benchmark du coût énergétique d'une isolation plus forte pour des fonctions serverless sur Kubernetes.",
+      problem:
+        "Les MicroVMs isolent mieux les fonctions serverless que les conteneurs, mais à quel prix ? L'objectif était de le mesurer plutôt que de le supposer.",
+      solution:
+        "Deux clusters Kubernetes avec Apache OpenWhisk : l'un avec des conteneurs classiques (containerd/runc), l'autre qui isole chaque fonction dans une MicroVM (Kata Containers sur QEMU). Kepler mesure l'énergie, Prometheus la stocke, Grafana l'affiche. Sur 60 tests, les MicroVMs consomment 6 à 9 fois plus d'énergie en démarrage à chaud.",
+      learned:
+        "Comment les runtimes de conteneurs et les MicroVMs diffèrent en profondeur, et comment construire un benchmark équitable pour appuyer un choix d'architecture sur des chiffres.",
+      stack: ["Kubernetes", "OpenWhisk", "Kata Containers", "Kepler", "Prometheus", "Grafana"],
+      github: links.github + "/serverless-containers-vs-microvms",
+    },
+  ],
+  qanda: [
+    {
+      question: "Quel type de travail préfères-tu ?",
+      answer:
+        "Les fonctionnalités qui vont jusqu'à la production. Chez Padoa, la migration des formes juridiques vers le système de listes de référence en est un bon exemple : elle touchait le modèle de données, le backend, le frontend et les données existantes, et devait fonctionner sans rien casser pour les utilisateurs.",
+    },
+    {
+      question: "Plutôt développeur ou DevOps ?",
+      answer:
+        "Un développeur qui s'intéresse à ce qui se passe après le code. L'essentiel de mon travail est full stack, mais j'ai aussi écrit des workflows CI, déployé avec Docker et Kubernetes, et provisionné de l'infrastructure avec Terraform et Ansible. Connaître les deux côtés m'aide à écrire du code plus facile à tester, déployer et superviser.",
+    },
+    {
+      question: "Comment abordes-tu les tests ?",
+      answer:
+        "Comme une partie de la fonctionnalité, pas comme une étape en plus. Chez Padoa, j'ai écrit des tests E2E Playwright sur les parcours métier, avec des fixtures et des Page Objects pour qu'ils restent lisibles et faciles à maintenir, et ils tournent dans la CI à chaque modification.",
+    },
+    {
+      question: "Que recherches-tu ?",
+      answer:
+        "Un CDI full stack ou DevOps à partir de novembre 2026, dans une équipe qui livre régulièrement en production et qui prend la qualité du code au sérieux. Je m'intéresse aussi à l'IA et à la façon de l'utiliser dans de vrais produits et dans notre manière de développer.",
+    },
+  ],
+  resumePdf: "/resume-fr.pdf",
+};
