@@ -11,6 +11,7 @@
   --color-ink-light:   #8a8a8a;
   --color-accent:      #1f3864;
   --color-accent-hover:#2c4d85;
+  --color-available:   #2b7a64;
 }
 
 @theme inline {
@@ -29,6 +30,7 @@
   --color-ink-light:   #737373;
   --color-accent:      #8fb0e8;
   --color-accent-hover:#a9c3ef;
+  --color-available:   #4fbf98;
 }
 
 body {

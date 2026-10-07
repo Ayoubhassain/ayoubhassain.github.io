@@ -27,6 +27,9 @@ export type Dictionary = {
     inDepth: string;
     project: string;
     focusedOn: string;
+    available: string;
+    experience: string;
+    seeResume: string;
   };
   about: {
     label: string;
@@ -34,8 +37,6 @@ export type Dictionary = {
     subtitle: string;
     basedIn: string;
     reachMe: string;
-    writeOn: string;
-    writeOnSuffix: string;
     skills: string;
     languages: string;
   };
@@ -70,12 +71,13 @@ export type Dictionary = {
   };
   profile: {
     name: string;
+    photoAlt: string;
     title: string;
     headline: string;
     bio: string;
     location: string;
     email: string;
-    focus: string[];
+    stack: string[];
     spokenLanguages: { name: string; level: string }[];
   };
   experience: ExperienceEntry[];

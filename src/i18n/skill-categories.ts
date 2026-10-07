@@ -29,10 +29,18 @@ const LABELS: Record<Locale, Record<keyof typeof SKILL_ITEMS, { name: string; de
   },
 };
 
+// French wording for the few skills that are not proper names.
+const FR_SKILLS: Record<string, string> = {
+  "REST APIs":                "API REST",
+  "Data migrations":          "Migrations de données",
+  "Unit & integration tests": "Tests unitaires et d'intégration",
+  "Code review":              "Revues de code",
+};
+
 export function getSkillCategories(locale: Locale): SkillCategory[] {
   return (Object.keys(SKILL_ITEMS) as (keyof typeof SKILL_ITEMS)[]).map((key) => ({
     name:        LABELS[locale][key].name,
     description: LABELS[locale][key].description,
-    skills:      [...SKILL_ITEMS[key]],
+    skills:      SKILL_ITEMS[key].map((skill) => (locale === "fr" ? FR_SKILLS[skill] ?? skill : skill)),
   }));
 }

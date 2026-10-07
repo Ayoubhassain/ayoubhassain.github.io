@@ -41,13 +41,16 @@ export const fr: Dictionary = {
     tagline:        "Ingénieur Full Stack & DevOps",
     proofPoint:
       "Récemment : stage de fin d'études chez Padoa, sur une plateforme SaaS en production — nouvelles fonctionnalités en Angular et Node.js, tests E2E avec Playwright, et CI/CD jusqu'au déploiement Kubernetes.",
-    locationLine:   "Paris · ENSEEIHT · Disponible à partir de novembre 2026",
+    locationLine:   "Paris · ENSEEIHT",
     viewProjects:   "Voir mes projets",
     downloadResume: "Télécharger mon CV",
     contactMe:      "Me contacter",
     inDepth:        "À découvrir",
     project:        "Projet",
-    focusedOn:      "Ce que je fais",
+    focusedOn:      "Stack principale",
+    available:      "Disponible à partir de novembre 2026",
+    experience:     "Expériences",
+    seeResume:      "CV complet →",
   },
   about: {
     label:          "À propos",
@@ -55,8 +58,6 @@ export const fr: Dictionary = {
     subtitle:       "Qui je suis, ce que je fais, et avec quoi je travaille.",
     basedIn:        "Basé à",
     reachMe:        "Me contacter :",
-    writeOn:        "",
-    writeOnSuffix:  "",
     skills:         "Compétences",
     languages:      "Langues",
   },
@@ -91,16 +92,18 @@ export const fr: Dictionary = {
   },
   profile: {
     name:     "Ayoub Hassain",
+    photoAlt: "Portrait d'Ayoub Hassain",
     title:    "Ingénieur Full Stack & DevOps",
     headline:
       "Ingénieur ENSEEIHT. Je développe des applications web de la base de données à l'interface, et je les mets en production avec tests, CI/CD et Kubernetes.",
     bio:
-      "Ingénieur en informatique et télécommunications diplômé de l'ENSEEIHT (Toulouse INP), filière Infrastructure et Big Data. Au fil de trois expériences, j'ai conçu et fait évoluer des applications web des deux côtés : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Chez Padoa, j'ai aussi travaillé sur ce qui se passe après le code : tests E2E automatisés, pipelines CI, déploiements Docker et Kubernetes, supervision en production. Je recherche un CDI à partir de novembre 2026, et je m'intéresse à l'IA et à la façon dont elle change le développement logiciel.",
+      "Ingénieur en informatique et télécommunications diplômé de l'ENSEEIHT (Toulouse INP), filière Infrastructure et Big Data.\n\nAu fil de trois expériences, j'ai conçu et fait évoluer des applications web des deux côtés : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Chez Padoa, j'ai aussi travaillé sur ce qui se passe après le code : tests E2E automatisés, pipelines CI, déploiements Docker et Kubernetes, supervision en production.\n\nJe recherche un CDI à partir de novembre 2026. Je m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
-    focus: ["Full stack (Angular, Node.js, Java)", "CI/CD et Kubernetes", "Tests automatisés", "Infrastructure as Code"],
+    stack: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
     spokenLanguages: [
-      { name: "Français", level: "Langue maternelle" },
+      { name: "Arabe",    level: "Langue maternelle" },
+      { name: "Français", level: "Bilingue" },
       { name: "Anglais",  level: "Professionnel (C1)" },
       { name: "Allemand", level: "Notions (A2)" },
     ],
@@ -109,6 +112,7 @@ export const fr: Dictionary = {
     {
       role: "Développeur Full Stack / DevOps — stage de fin d'études",
       company: "Padoa",
+      summary: "Full stack et DevOps sur un SaaS de santé au travail en production : Angular, Node.js, Playwright, Kubernetes.",
       period: "Mars 2026 – Sept. 2026",
       description:
         "Nouvelles fonctionnalités d'une plateforme SaaS de santé au travail en production (Angular/RxJS, TypeScript, Node.js/Express, PostgreSQL), en équipe Agile/Scrum. Migration des formes juridiques vers le système de listes de référence : évolution du modèle de données, adaptation backend/frontend et reprise des données via scripts SQL. Interface de gestion de modèles de devis Word. Tests E2E Playwright sur les parcours métier (fixtures, Page Objects). CI/CD avec GitHub Actions, Docker et déploiement Kubernetes via Helm et Argo CD. Revues de code et correction d'anomalies en production (logs, Prometheus/Grafana).",
@@ -116,6 +120,7 @@ export const fr: Dictionary = {
     {
       role: "Développeur Full Stack — stage",
       company: "Banque Centrale Populaire",
+      summary: "Application de gestion des chèques pour l'équipe comptabilité, en Spring Boot et Angular.",
       period: "Juin 2025 – Sept. 2025",
       description:
         "Conception et développement d'une application de gestion des chèques pour l'équipe comptabilité de la banque, avec un backend Java/Spring Boot et un frontend Angular. Création, recherche, modification et suivi des chèques, avec scan, impression calibrée et montants en lettres. API REST, persistance MySQL avec JPA/Hibernate, intégration continue (tests, build Maven, image Docker) et déploiement sur serveur (Tomcat/Nginx).",
@@ -123,6 +128,7 @@ export const fr: Dictionary = {
     {
       role: "Développeur Front-End — stage",
       company: "SQLI",
+      summary: "Interfaces Angular pour une application RH interne.",
       period: "Juil. 2024 – Sept. 2024",
       description:
         "Interfaces Angular/TypeScript pour une application RH interne : formulaires, affichage dynamique et intégration d'API REST. Participation aux tests, corrections d'anomalies et évolutions fonctionnelles au sein de l'équipe projet.",

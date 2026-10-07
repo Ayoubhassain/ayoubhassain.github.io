@@ -44,7 +44,9 @@ export default async function AboutPage({ params }: PageProps) {
       />
 
       <div className="max-w-2xl space-y-6 text-lg leading-relaxed text-ink-muted">
-        <p>{t.profile.bio}</p>
+        {t.profile.bio.split("\n\n").map((para) => (
+          <p key={para.slice(0, 24)}>{para}</p>
+        ))}
         <p>
           {t.about.basedIn}{" "}
           {t.profile.location}

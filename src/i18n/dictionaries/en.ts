@@ -48,13 +48,16 @@ export const en: Dictionary = {
     tagline:        "Full Stack & DevOps Engineer",
     proofPoint:
       "Recently: final-year internship at Padoa, on a production SaaS platform — new features in Angular and Node.js, end-to-end tests with Playwright, and CI/CD up to Kubernetes.",
-    locationLine:   "Paris, France · ENSEEIHT · Available from November 2026",
+    locationLine:   "Paris, France · ENSEEIHT",
     viewProjects:   "View projects",
     downloadResume: "Download resume",
     contactMe:      "Contact me",
     inDepth:        "In depth",
     project:        "Project",
-    focusedOn:      "What I work on",
+    focusedOn:      "Core stack",
+    available:      "Available from November 2026",
+    experience:     "Experience",
+    seeResume:      "Full resume →",
   },
   about: {
     label:          "About",
@@ -62,8 +65,6 @@ export const en: Dictionary = {
     subtitle:       "A bit about who I am and what I work with.",
     basedIn:        "Based in",
     reachMe:        "You can reach me at",
-    writeOn:        "",
-    writeOnSuffix:  "",
     skills:         "Skills",
     languages:      "Languages",
   },
@@ -98,16 +99,18 @@ export const en: Dictionary = {
   },
   profile: {
     name:     "Ayoub Hassain",
+    photoAlt: "Portrait of Ayoub Hassain",
     title:    "Full Stack & DevOps Engineer",
     headline:
       "Engineer from ENSEEIHT. I build web applications from the database to the UI, and ship them to production with tests, CI/CD and Kubernetes.",
     bio:
-      "I'm a computer science and telecommunications engineer from ENSEEIHT (Toulouse INP), with a major in Infrastructure and Big Data. Across three experiences, I have built and evolved web applications on both sides: Angular and TypeScript on the front end, Node.js and Java/Spring Boot on the back end. At Padoa, I also worked on what happens after the code is written: automated end-to-end tests, CI pipelines, Docker and Kubernetes deployments, and production monitoring. I'm looking for a full-time role from November 2026, and I'm interested in AI and how it changes the way we build software.",
+      "I'm a computer science and telecommunications engineer from ENSEEIHT (Toulouse INP), with a major in Infrastructure and Big Data.\n\nAcross three experiences, I have built and evolved web applications on both sides: Angular and TypeScript on the front end, Node.js and Java/Spring Boot on the back end. At Padoa, I also worked on what happens after the code is written: automated end-to-end tests, CI pipelines, Docker and Kubernetes deployments, and production monitoring.\n\nI'm looking for a full-time role from November 2026. I'm also interested in AI and how it changes the way we build software.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
-    focus: ["Full stack (Angular, Node.js, Java)", "CI/CD & Kubernetes", "Automated testing", "Infrastructure as Code"],
+    stack: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
     spokenLanguages: [
-      { name: "French",  level: "Native" },
+      { name: "Arabic",  level: "Native" },
+      { name: "French",  level: "Bilingual" },
       { name: "English", level: "Professional (C1)" },
       { name: "German",  level: "Basic (A2)" },
     ],
@@ -116,6 +119,7 @@ export const en: Dictionary = {
     {
       role: "Full Stack / DevOps Engineer — final-year internship",
       company: "Padoa",
+      summary: "Full stack and DevOps on an occupational-health SaaS in production: Angular, Node.js, Playwright, Kubernetes.",
       period: "Mar 2026 – Sep 2026",
       description:
         "New features on a production occupational-health SaaS platform (Angular/RxJS, TypeScript, Node.js/Express, PostgreSQL), in an Agile/Scrum team. Migrated legal forms to the reference-list system: data model changes, back-end and front-end updates, and data migration with SQL scripts. Built an interface to manage Word quote templates. Wrote Playwright end-to-end tests on business workflows (fixtures, Page Objects). Worked on CI/CD with GitHub Actions, Docker, and Kubernetes deployment with Helm and Argo CD. Code reviews and production bug fixing with logs and Prometheus/Grafana.",
@@ -123,6 +127,7 @@ export const en: Dictionary = {
     {
       role: "Full Stack Developer — internship",
       company: "Banque Centrale Populaire",
+      summary: "Built a cheque management application for the accounting team, in Spring Boot and Angular.",
       period: "Jun 2025 – Sep 2025",
       description:
         "Designed and built a cheque management application for the bank's accounting team, with a Java/Spring Boot back end and an Angular front end. Creation, search, editing and tracking of cheques, with scanning, calibrated printing and amounts written in words. REST API, MySQL persistence with JPA/Hibernate, continuous integration (tests, Maven build, Docker image) and server deployment (Tomcat/Nginx).",
@@ -130,6 +135,7 @@ export const en: Dictionary = {
     {
       role: "Front-End Developer — internship",
       company: "SQLI",
+      summary: "Angular interfaces for an internal HR application.",
       period: "Jul 2024 – Sep 2024",
       description:
         "Angular/TypeScript interfaces for an internal HR application: forms, dynamic views and REST API integration. Took part in testing, bug fixing and feature changes within the project team.",

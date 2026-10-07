@@ -3,6 +3,7 @@ export type ExperienceEntry = {
   company: string;
   period: string;
   description: string;
+  summary?: string; // one-liner shown on the home page
 };
 
 export default function ExperienceCard({ role, company, period, description }: ExperienceEntry) {
