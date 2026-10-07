@@ -1,4 +1,3 @@
-import ScrambleText from "./ScrambleText";
 
 type SectionHeaderProps = {
   title: string;
@@ -17,7 +16,7 @@ export default function SectionHeader({ title, subtitle, label, action }: Sectio
           </p>
         )}
         <h1 className="text-4xl font-bold tracking-tight text-ink md:text-5xl">
-          <ScrambleText text={title} delay={40} />
+          {title}
         </h1>
         {subtitle && (
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted">{subtitle}</p>

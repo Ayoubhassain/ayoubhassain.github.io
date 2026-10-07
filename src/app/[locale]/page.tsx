@@ -7,7 +7,6 @@ import { buildPageMetadata } from "@/lib/site-metadata";
 import PageContainer from "@/components/layout/PageContainer";
 import LinkButton from "@/components/ui/LinkButton";
 import Tag from "@/components/ui/Tag";
-import ScrambleText from "@/components/ui/ScrambleText";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -45,7 +44,7 @@ export default async function HomePage({ params }: PageProps) {
           </p>
 
           <h1 className="max-w-3xl text-5xl font-bold leading-[1.1] tracking-tight text-ink md:text-7xl">
-            <ScrambleText text={t.profile.name} delay={80} />
+            {t.profile.name}
           </h1>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-ink-muted md:text-2xl">
