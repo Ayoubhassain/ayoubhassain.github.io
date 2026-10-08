@@ -22,11 +22,9 @@ export default function Navbar({ locale }: NavbarProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-5">
-        <Link href={`/${locale}`} className="leading-none shrink-0">
-          <span className="block text-lg font-bold tracking-tight text-ink">{first}</span>
-          <span className="block text-lg font-light tracking-tight text-ink-muted">
-            {rest.join(" ")}
-          </span>
+        <Link href={`/${locale}`} className="shrink-0 text-lg tracking-tight">
+          <span className="font-bold text-ink">{first}</span>{" "}
+          <span className="font-light text-ink-muted">{rest.join(" ")}</span>
         </Link>
 
         <div className="flex items-center gap-3 sm:gap-6">

@@ -30,6 +30,9 @@ export type Dictionary = {
     available: string;
     experience: string;
     seeResume: string;
+    allProjects: string;
+    contactTitle: string;
+    contactText: string;
   };
   about: {
     label: string;
@@ -77,7 +80,7 @@ export type Dictionary = {
     bio: string;
     location: string;
     email: string;
-    stack: string[];
+    stack: { label: string; items: string[] }[];
     spokenLanguages: { name: string; level: string }[];
   };
   experience: ExperienceEntry[];

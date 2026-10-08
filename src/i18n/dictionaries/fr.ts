@@ -40,7 +40,7 @@ export const fr: Dictionary = {
   home: {
     tagline:        "Ingénieur Full Stack & DevOps",
     proofPoint:
-      "Récemment : stage de fin d'études chez Padoa, sur une plateforme SaaS en production — nouvelles fonctionnalités en Angular et Node.js, tests E2E avec Playwright, et CI/CD jusqu'au déploiement Kubernetes.",
+      "Récemment chez Padoa : nouvelles fonctionnalités en Angular et Node.js sur un SaaS en production, tests E2E avec Playwright et CI/CD jusqu'au déploiement Kubernetes.",
     locationLine:   "Paris · ENSEEIHT",
     viewProjects:   "Voir mes projets",
     downloadResume: "Télécharger mon CV",
@@ -51,6 +51,9 @@ export const fr: Dictionary = {
     available:      "Disponible à partir de novembre 2026",
     experience:     "Expériences",
     seeResume:      "CV complet →",
+    allProjects:    "Tous les projets →",
+    contactTitle:   "Un poste full stack ou DevOps à pourvoir\u00a0?",
+    contactText:    "Je suis disponible à partir de novembre 2026. Parlons-en.",
   },
   about: {
     label:          "À propos",
@@ -95,12 +98,16 @@ export const fr: Dictionary = {
     photoAlt: "Portrait d'Ayoub Hassain",
     title:    "Ingénieur Full Stack & DevOps",
     headline:
-      "Ingénieur ENSEEIHT. Je développe des applications web de la base de données à l'interface, et je les mets en production avec tests, CI/CD et Kubernetes.",
+      "Je développe des applications web de bout en bout, et je les mets en production.",
     bio:
       "Ingénieur en informatique et télécommunications diplômé de l'ENSEEIHT (Toulouse INP), filière Infrastructure et Big Data.\n\nAu fil de trois expériences, j'ai conçu et fait évoluer des applications web des deux côtés : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Chez Padoa, j'ai aussi travaillé sur ce qui se passe après le code : tests E2E automatisés, pipelines CI, déploiements Docker et Kubernetes, supervision en production.\n\nJe recherche un CDI à partir de novembre 2026. Je m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
-    stack: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
+    stack: [
+      { label: "Développement", items: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot"] },
+      { label: "Données", items: ["PostgreSQL", "MySQL"] },
+      { label: "DevOps & cloud", items: ["Docker", "Kubernetes", "Terraform", "GitHub Actions"] },
+    ],
     spokenLanguages: [
       { name: "Français", level: "Langue maternelle" },
       { name: "Anglais",  level: "Professionnel (C1)" },

@@ -47,7 +47,7 @@ export const en: Dictionary = {
   home: {
     tagline:        "Full Stack & DevOps Engineer",
     proofPoint:
-      "Recently: final-year internship at Padoa, on a production SaaS platform — new features in Angular and Node.js, end-to-end tests with Playwright, and CI/CD up to Kubernetes.",
+      "Recently at Padoa: new features in Angular and Node.js on a production SaaS platform, end-to-end tests with Playwright, and CI/CD up to Kubernetes.",
     locationLine:   "Paris, France · ENSEEIHT",
     viewProjects:   "View projects",
     downloadResume: "Download resume",
@@ -58,6 +58,9 @@ export const en: Dictionary = {
     available:      "Available from November 2026",
     experience:     "Experience",
     seeResume:      "Full resume →",
+    allProjects:    "All projects →",
+    contactTitle:   "Hiring for a full stack or DevOps role?",
+    contactText:    "I'm available from November 2026. Let's talk.",
   },
   about: {
     label:          "About",
@@ -102,12 +105,16 @@ export const en: Dictionary = {
     photoAlt: "Portrait of Ayoub Hassain",
     title:    "Full Stack & DevOps Engineer",
     headline:
-      "Engineer from ENSEEIHT. I build web applications from the database to the UI, and ship them to production with tests, CI/CD and Kubernetes.",
+      "I build web applications end to end, and ship them to production.",
     bio:
       "I'm a computer science and telecommunications engineer from ENSEEIHT (Toulouse INP), with a major in Infrastructure and Big Data.\n\nAcross three experiences, I have built and evolved web applications on both sides: Angular and TypeScript on the front end, Node.js and Java/Spring Boot on the back end. At Padoa, I also worked on what happens after the code is written: automated end-to-end tests, CI pipelines, Docker and Kubernetes deployments, and production monitoring.\n\nI'm looking for a full-time role from November 2026. I'm also interested in AI and how it changes the way we build software.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
-    stack: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
+    stack: [
+      { label: "Development", items: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot"] },
+      { label: "Data", items: ["PostgreSQL", "MySQL"] },
+      { label: "DevOps & cloud", items: ["Docker", "Kubernetes", "Terraform", "GitHub Actions"] },
+    ],
     spokenLanguages: [
       { name: "French",  level: "Native" },
       { name: "English", level: "Professional (C1)" },
