@@ -24,9 +24,19 @@ export default function Navbar({ locale }: NavbarProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-5">
-        <Link href={`/${locale}`} className="shrink-0 text-lg tracking-tight">
-          <span className="font-bold text-ink">{first}</span>{" "}
-          <span className="font-light text-ink-muted">{rest.join(" ")}</span>
+        <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3 text-lg tracking-tight">
+          <span
+            aria-hidden="true"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent text-sm font-bold tracking-normal text-bg"
+          >
+            {first[0]}
+            {rest.join(" ")[0]}
+          </span>
+          <span className="hidden sm:inline">
+            <span className="font-bold text-ink">{first}</span>{" "}
+            <span className="font-light text-ink-muted">{rest.join(" ")}</span>
+          </span>
+          <span className="sr-only sm:hidden">{t.profile.name}</span>
         </Link>
 
         <div className="flex items-center gap-3 sm:gap-4">

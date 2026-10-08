@@ -61,12 +61,22 @@ export const fr: Dictionary = {
   },
   about: {
     label:          "À propos",
-    title:          "À propos",
-    subtitle:       "Qui je suis, ce que je fais, et avec quoi je travaille.",
-    basedIn:        "Basé à",
-    reachMe:        "Me contacter :",
+    title:          "Du code à la production.",
+    subtitle:       "",
     skills:         "Compétences",
     languages:      "Langues",
+    facts: [
+      { value: "ENSEEIHT", label: "ingénieur, diplômé en 2026" },
+      { value: "3", label: "expériences : Padoa, BCP, SQLI" },
+      { value: "Paris", label: "basé en France" },
+      { value: "Nov. 2026", label: "disponibilité" },
+    ],
+    workTitle:      "Ma façon de travailler",
+    work: [
+      { title: "Tester dès le départ", text: "Tests E2E avec Playwright et Page Objects, écrits avec la fonctionnalité et lancés dans la CI." },
+      { title: "Aller jusqu'à la production", text: "CI/CD avec GitHub Actions, Docker et Kubernetes, puis suivi avec Prometheus et Grafana." },
+      { title: "Travailler en équipe", text: "Revues de code, rituels Agile/Scrum et correction d'anomalies en production avec l'équipe." },
+    ],
   },
   projectsPage: {
     label:    "Projets",

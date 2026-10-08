@@ -42,10 +42,11 @@ export type Dictionary = {
     label: string;
     title: string;
     subtitle: string;
-    basedIn: string;
-    reachMe: string;
     skills: string;
     languages: string;
+    facts: { value: string; label: string }[];
+    workTitle: string;
+    work: { title: string; text: string }[];
   };
   projectsPage: {
     label: string;

@@ -68,12 +68,22 @@ export const en: Dictionary = {
   },
   about: {
     label:          "About",
-    title:          "About me",
-    subtitle:       "A bit about who I am and what I work with.",
-    basedIn:        "Based in",
-    reachMe:        "You can reach me at",
+    title:          "From code to production.",
+    subtitle:       "",
     skills:         "Skills",
     languages:      "Languages",
+    facts: [
+      { value: "ENSEEIHT", label: "Engineer, graduated 2026" },
+      { value: "3", label: "experiences: Padoa, BCP, SQLI" },
+      { value: "Paris", label: "based in France" },
+      { value: "Nov. 2026", label: "available" },
+    ],
+    workTitle:      "How I work",
+    work: [
+      { title: "Tests from the start", text: "End-to-end tests with Playwright and Page Objects, written with the feature, run in the CI." },
+      { title: "Up to production", text: "CI/CD with GitHub Actions, Docker and Kubernetes, then monitoring with Prometheus and Grafana." },
+      { title: "As a team", text: "Code reviews, Agile/Scrum rituals, and fixing production bugs with the team." },
+    ],
   },
   projectsPage: {
     label:    "Projects",

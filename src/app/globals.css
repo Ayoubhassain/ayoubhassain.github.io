@@ -37,6 +37,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keyboard focus: thin ring in the site colour, hidden for mouse clicks */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-ink);
