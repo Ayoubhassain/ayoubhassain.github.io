@@ -155,11 +155,11 @@ export const fr: Dictionary = {
       title: "Cluster Spark sur GCP",
       description: "Un cluster Apache Spark déployé de zéro sur Google Cloud, avec Terraform et Ansible.",
       problem:
-        "Rendre un cluster de calcul distribué reproductible : passer d'un projet cloud vide à un job Spark qui tourne, sans étape manuelle, en gardant les nœuds de calcul hors d'internet.",
+        "Rendre un cluster de calcul distribué reproductible : passer d'un projet cloud vide à un job Spark qui tourne, sans étape manuelle, avec un seul point d'entrée SSH.",
       solution:
-        "Terraform crée les VM, le VPC et un sous-réseau privé sur GCP. Ansible installe ensuite Java et Spark, configure le master et les workers, et monte un stockage NFS partagé. Le cluster est validé avec un job WordCount : 28 s avec un exécuteur, 19 s avec deux.",
+        "Terraform crée le VPC, les règles de pare-feu et 5 VM (master, workers, nœud edge, stockage NFS) et génère lui-même l'inventaire Ansible. Ansible installe Java et Spark, lance le master et les workers en services systemd et monte un volume NFS partagé, en passant par le nœud edge. Un WordCount Java tourne en 28 s sur 1 cœur et 19 s sur 2.",
       learned:
-        "L'Infrastructure as Code de bout en bout : séparer le provisioning de la configuration, isoler les nœuds dans un réseau privé, et reconstruire tout un cluster en une commande.",
+        "Séparer le provisioning de la configuration, générer l'inventaire au lieu de recopier des IP, et lire un benchmark pour trouver le vrai goulot : au-delà de 2 cœurs, ce sont les données, pas le CPU, qui limitaient.",
       stack: ["GCP", "Terraform", "Ansible", "Apache Spark", "NFS", "Linux"],
       github: links.github + "/spark-cluster-gcp",
     },
