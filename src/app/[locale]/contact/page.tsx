@@ -8,6 +8,7 @@ import PageContainer from "@/components/layout/PageContainer";
 import SectionHeader from "@/components/ui/SectionHeader";
 import LinkButton from "@/components/ui/LinkButton";
 import CopyEmail from "@/components/ui/CopyEmail";
+import EmailMenu from "@/components/ui/EmailMenu";
 import { GITHUB_PATH, LINKEDIN_PATH } from "@/components/ui/IconLink";
 
 type PageProps = {
@@ -57,9 +58,7 @@ export default async function ContactPage({ params }: PageProps) {
             <p className="mt-1 text-sm text-ink-muted">{c.emailText}</p>
             <div className="mt-5 flex flex-wrap items-center gap-3">
               <CopyEmail email={t.profile.email} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
-              <LinkButton href={`mailto:${t.profile.email}`} variant="primary">
-                {t.home.sendEmail}
-              </LinkButton>
+              <EmailMenu email={t.profile.email} label={t.home.sendEmail} subject={t.home.emailSubject} appLabel={t.home.emailApp} />
             </div>
           </div>
           <div className="border-t border-border pt-6 md:border-t-0 md:border-l md:pt-0 md:pl-6">

@@ -36,6 +36,8 @@ export type Dictionary = {
     contactTitle: string;
     contactText: string;
     sendEmail: string;
+    emailSubject: string;
+    emailApp: string;
     copyEmail: string;
     copied: string;
   };

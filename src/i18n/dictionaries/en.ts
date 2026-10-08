@@ -68,6 +68,8 @@ export const en: Dictionary = {
     contactTitle:   "Hiring for a full stack or DevOps role?",
     contactText:    "I'm available from November 2026. Let's talk.",
     sendEmail:      "Send an email",
+    emailSubject:   "Getting in touch via your portfolio",
+    emailApp:       "Mail app",
     copyEmail:      "Copy",
     copied:         "Copied!",
   },

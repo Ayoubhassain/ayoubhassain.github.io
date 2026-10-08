@@ -2,6 +2,7 @@ import type { Dictionary } from "@/i18n/types";
 import { links } from "@/i18n/dictionaries/en";
 import LinkButton from "@/components/ui/LinkButton";
 import CopyEmail from "@/components/ui/CopyEmail";
+import EmailMenu from "@/components/ui/EmailMenu";
 import IconLink, { LINKEDIN_PATH } from "@/components/ui/IconLink";
 
 /** "Hiring?" call to action, shown at the bottom of the home and projects pages. */
@@ -19,9 +20,7 @@ export default function ContactSection({ t, id }: { t: Dictionary; id?: string }
             </div>
           </div>
           <div className="flex shrink-0 flex-wrap items-center gap-3 md:flex-nowrap">
-            <LinkButton href={`mailto:${t.profile.email}`} variant="primary">
-              {t.home.sendEmail}
-            </LinkButton>
+            <EmailMenu email={t.profile.email} label={t.home.sendEmail} subject={t.home.emailSubject} appLabel={t.home.emailApp} />
             <LinkButton href={t.resumePdf} download variant="ghost">
               {t.home.downloadResume}
             </LinkButton>
