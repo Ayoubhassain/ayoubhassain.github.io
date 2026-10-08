@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import type { Dictionary } from "@/i18n/types";
 import { buildPageMetadata } from "@/lib/site-metadata";
 import { withBasePath } from "@/lib/base-path";
 import { links } from "@/i18n/dictionaries/en";
@@ -124,7 +125,7 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Path: a real sequence, from prépa to the next job */}
+      {/* Path: experience and education, most recent first */}
       <section className="border-t border-border">
         <div className={SECTION}>
           <div className="flex items-baseline justify-between gap-4">
@@ -133,25 +134,10 @@ export default async function HomePage({ params }: PageProps) {
               {t.home.seeResume}
             </Link>
           </div>
-          <ol className="mt-12 grid gap-y-10 sm:grid-cols-2 md:grid-cols-3">
-            {a.journey.map((step) => (
-              <li
-                key={step.title}
-                className={`relative border-t-2 pt-5 sm:pr-8 ${step.next ? "border-dashed border-available/60" : "border-border"}`}
-              >
-                <span
-                  aria-hidden="true"
-                  className={`absolute -top-[7px] left-0 h-3 w-3 rounded-full ring-4 ring-bg ${step.next ? "bg-available" : "bg-accent"}`}
-                />
-                <p className={`text-sm font-semibold ${step.next ? "text-available" : "text-accent"}`}>
-                  {step.period}
-                  {step.place && <span className="font-normal text-ink-light">, {step.place}</span>}
-                </p>
-                <h3 className="mt-1 text-lg font-semibold text-ink">{step.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink-muted">{step.text}</p>
-              </li>
-            ))}
-          </ol>
+          <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
+            <Timeline title={t.home.experience} steps={a.journey.filter((step) => step.kind === "work")} />
+            <Timeline title={t.resume.education} steps={a.journey.filter((step) => step.kind === "education")} />
+          </div>
         </div>
       </section>
 
@@ -195,6 +181,51 @@ export default async function HomePage({ params }: PageProps) {
 
       <ContactSection t={t} id="contact" />
     </div>
+  );
+}
+
+type Step = Dictionary["about"]["journey"][number];
+
+/** Vertical timeline. The next step (the job I am looking for) sits on a dashed line above the rest. */
+function Timeline({ title, steps }: { title: string; steps: Step[] }) {
+  const next = steps.filter((step) => step.next);
+  const past = steps.filter((step) => !step.next);
+
+  return (
+    <div>
+      <h3 className="mb-8 text-lg font-semibold text-ink">{title}</h3>
+      {next.map((step) => (
+        <div key={step.title} className="border-l-2 border-dashed border-available/60 pb-8 pl-6">
+          <div className="relative">
+            <StepContent step={step} />
+          </div>
+        </div>
+      ))}
+      <ol className="space-y-8 border-l-2 border-border pl-6">
+        {past.map((step) => (
+          <li key={step.title} className="relative">
+            <StepContent step={step} />
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function StepContent({ step }: { step: Step }) {
+  return (
+    <>
+      <span
+        aria-hidden="true"
+        className={`absolute top-1 -left-[31px] h-3 w-3 rounded-full ring-4 ring-bg ${step.next ? "bg-available" : "bg-accent"}`}
+      />
+      <p className={`text-sm font-semibold ${step.next ? "text-available" : "text-accent"}`}>
+        {step.period}
+        {step.place && <span className="font-normal text-ink-light">, {step.place}</span>}
+      </p>
+      <p className="mt-1 text-lg font-semibold text-ink">{step.title}</p>
+      <p className="mt-1 text-sm leading-relaxed text-ink-muted">{step.text}</p>
+    </>
   );
 }
 

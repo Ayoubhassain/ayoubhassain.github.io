@@ -79,12 +79,12 @@ export const fr: Dictionary = {
     quick: ["Basé à Paris", "Français, anglais (C1), allemand (A2)"],
     journeyTitle:   "Mon parcours",
     journey: [
-      { period: "2021 – 2023", place: "Benguérir", title: "Classes préparatoires", text: "MPSI puis MP* : deux ans de mathématiques et de physique intensives." },
-      { period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Diplôme d'ingénieur, génie logiciel : Java, C++, conception objet, bases de données, réseaux, cloud." },
-      { period: "2024", place: "Oujda", title: "SQLI", text: "Stage front-end : interfaces Angular et TypeScript pour une application RH." },
-      { period: "2025", place: "Oujda", title: "Banque Centrale Populaire", text: "Stage full stack : application de gestion des chèques en Spring Boot et Angular." },
-      { period: "2026", place: "Paris", title: "Padoa", text: "Stage de fin d'études full stack / DevOps sur un SaaS de santé au travail en production." },
-      { period: "Nov. 2026", place: "", title: "La suite", text: "Un CDI de développeur full stack ou d'ingénieur DevOps.", next: true },
+      { kind: "work", period: "Nov. 2026", place: "", title: "La suite", text: "Un CDI de développeur full stack ou d'ingénieur DevOps.", next: true },
+      { kind: "work", period: "2026", place: "Paris", title: "Padoa", text: "Stage de fin d'études full stack / DevOps sur un SaaS de santé au travail en production." },
+      { kind: "work", period: "2025", place: "Oujda", title: "Banque Centrale Populaire", text: "Stage full stack : application de gestion des chèques en Spring Boot et Angular." },
+      { kind: "work", period: "2024", place: "Oujda", title: "SQLI", text: "Stage front-end : interfaces Angular et TypeScript pour une application RH." },
+      { kind: "education", period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Diplôme d'ingénieur, génie logiciel : Java, C++, conception objet, bases de données, réseaux, cloud." },
+      { kind: "education", period: "2021 – 2023", place: "Benguérir", title: "Classes préparatoires", text: "MPSI puis MP* : deux ans de mathématiques et de physique intensives." },
     ],
     workTitle:      "Ce que je fais",
     work: [

@@ -52,7 +52,7 @@ export type Dictionary = {
     intro: string;
     quick: string[];
     journeyTitle: string;
-    journey: { period: string; place: string; title: string; text: string; next?: boolean }[];
+    journey: { kind: "work" | "education"; period: string; place: string; title: string; text: string; next?: boolean }[];
     workTitle: string;
     work: { title: string; text: string; tags: string[] }[];
   };

@@ -86,12 +86,12 @@ export const en: Dictionary = {
     quick: ["Based in Paris", "French, English (C1), German (A2)"],
     journeyTitle:   "My path",
     journey: [
-      { period: "2021 – 2023", place: "Benguérir", title: "Preparatory classes", text: "MPSI then MP*: two years of intensive mathematics and physics." },
-      { period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Engineering degree, software engineering: Java, C++, object-oriented design, databases, networks, cloud." },
-      { period: "2024", place: "Oujda", title: "SQLI", text: "Front-end internship: Angular and TypeScript interfaces for an HR application." },
-      { period: "2025", place: "Oujda", title: "Banque Centrale Populaire", text: "Full stack internship: a cheque management application with Spring Boot and Angular." },
-      { period: "2026", place: "Paris", title: "Padoa", text: "Final-year full stack / DevOps internship on an occupational health SaaS in production." },
-      { period: "Nov. 2026", place: "", title: "What's next", text: "A full-time role as a full stack developer or DevOps engineer.", next: true },
+      { kind: "work", period: "Nov. 2026", place: "", title: "What's next", text: "A full-time role as a full stack developer or DevOps engineer.", next: true },
+      { kind: "work", period: "2026", place: "Paris", title: "Padoa", text: "Final-year full stack / DevOps internship on an occupational health SaaS in production." },
+      { kind: "work", period: "2025", place: "Oujda", title: "Banque Centrale Populaire", text: "Full stack internship: a cheque management application with Spring Boot and Angular." },
+      { kind: "work", period: "2024", place: "Oujda", title: "SQLI", text: "Front-end internship: Angular and TypeScript interfaces for an HR application." },
+      { kind: "education", period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Engineering degree, software engineering: Java, C++, object-oriented design, databases, networks, cloud." },
+      { kind: "education", period: "2021 – 2023", place: "Benguérir", title: "Preparatory classes", text: "MPSI then MP*: two years of intensive mathematics and physics." },
     ],
     workTitle:      "What I do",
     work: [
