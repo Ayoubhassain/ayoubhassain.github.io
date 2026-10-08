@@ -47,7 +47,10 @@ export type Dictionary = {
     subtitle: string;
     skills: string;
     languages: string;
-    facts: { value: string; label: string }[];
+    intro: string;
+    quick: string[];
+    journeyTitle: string;
+    journey: { period: string; place: string; title: string; text: string; next?: boolean }[];
     workTitle: string;
     work: { title: string; text: string }[];
   };

@@ -75,15 +75,21 @@ export const en: Dictionary = {
   },
   about: {
     label:          "About",
-    title:          "From code to production.",
+    title:          "Hi, I'm Ayoub.",
     subtitle:       "",
     skills:         "Skills",
     languages:      "Languages",
-    facts: [
-      { value: "ENSEEIHT", label: "Engineer, graduated 2026" },
-      { value: "3", label: "experiences: Padoa, BCP, SQLI" },
-      { value: "Paris", label: "based in France" },
-      { value: "Nov. 2026", label: "available" },
+    intro:
+      "I'm a software engineer, graduated from ENSEEIHT (Toulouse INP). What I enjoy is taking a feature end to end: designing it, building the front end and the back end, testing it, then seeing it run in production.\n\nOver three internships, I went from Angular interfaces at SQLI, to a full stack Spring Boot and Angular application at Banque Centrale Populaire, to a SaaS in production at Padoa, where I also worked on E2E tests, CI/CD and Kubernetes deployments.\n\nI'm also interested in AI and how it is changing software development.",
+    quick: ["Based in Paris", "French, English (C1), German (A2)", "Available from November 2026"],
+    journeyTitle:   "My path in brief",
+    journey: [
+      { period: "2021 – 2023", place: "Benguérir", title: "Preparatory classes", text: "MPSI then MP*: two years of intensive mathematics and physics." },
+      { period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Engineering degree, software engineering: Java, C++, object-oriented design, databases, networks, cloud." },
+      { period: "2024", place: "Oujda", title: "SQLI", text: "Front-end internship: Angular and TypeScript interfaces for an HR application." },
+      { period: "2025", place: "Oujda", title: "Banque Centrale Populaire", text: "Full stack internship: a cheque management application with Spring Boot and Angular." },
+      { period: "2026", place: "Paris", title: "Padoa", text: "Final-year full stack / DevOps internship on an occupational health SaaS in production." },
+      { period: "Nov. 2026", place: "", title: "What's next", text: "A full-time role as a full stack developer or DevOps engineer.", next: true },
     ],
     workTitle:      "How I work",
     work: [

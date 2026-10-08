@@ -68,15 +68,21 @@ export const fr: Dictionary = {
   },
   about: {
     label:          "À propos",
-    title:          "Du code à la production.",
+    title:          "Bonjour, je suis Ayoub.",
     subtitle:       "",
     skills:         "Compétences",
     languages:      "Langues",
-    facts: [
-      { value: "ENSEEIHT", label: "ingénieur, diplômé en 2026" },
-      { value: "3", label: "expériences : Padoa, BCP, SQLI" },
-      { value: "Paris", label: "basé en France" },
-      { value: "Nov. 2026", label: "disponibilité" },
+    intro:
+      "Je suis ingénieur en génie logiciel, diplômé de l'ENSEEIHT (Toulouse INP). Ce que j'aime, c'est prendre une fonctionnalité de bout en bout : la concevoir, la coder côté front et côté back, la tester, puis la voir tourner en production.\n\nEn trois stages, je suis passé d'interfaces Angular chez SQLI à une application full stack Spring Boot et Angular à la Banque Centrale Populaire, puis à un SaaS en production chez Padoa, où j'ai aussi travaillé sur les tests E2E, la CI/CD et le déploiement Kubernetes.\n\nJe m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
+    quick: ["Basé à Paris", "Français, anglais (C1), allemand (A2)", "Disponible en novembre 2026"],
+    journeyTitle:   "Mon parcours en bref",
+    journey: [
+      { period: "2021 – 2023", place: "Benguérir", title: "Classes préparatoires", text: "MPSI puis MP* : deux ans de mathématiques et de physique intensives." },
+      { period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Diplôme d'ingénieur, génie logiciel : Java, C++, conception objet, bases de données, réseaux, cloud." },
+      { period: "2024", place: "Oujda", title: "SQLI", text: "Stage front-end : interfaces Angular et TypeScript pour une application RH." },
+      { period: "2025", place: "Oujda", title: "Banque Centrale Populaire", text: "Stage full stack : application de gestion des chèques en Spring Boot et Angular." },
+      { period: "2026", place: "Paris", title: "Padoa", text: "Stage de fin d'études full stack / DevOps sur un SaaS de santé au travail en production." },
+      { period: "Nov. 2026", place: "", title: "La suite", text: "Un CDI de développeur full stack ou d'ingénieur DevOps.", next: true },
     ],
     workTitle:      "Ma façon de travailler",
     work: [
