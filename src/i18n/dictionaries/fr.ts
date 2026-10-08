@@ -192,15 +192,15 @@ export const fr: Dictionary = {
     {
       id: "serverless-containers-vs-microvms",
       title: "Serverless : conteneurs vs MicroVMs",
-      description: "Un benchmark du coût énergétique d'une isolation plus forte pour des fonctions serverless sur Kubernetes.",
+      description: "Mesurer le coût énergétique de l'isolation des fonctions serverless en MicroVM, sur Kubernetes avec Apache OpenWhisk.",
       problem:
-        "Les MicroVMs isolent mieux les fonctions serverless que les conteneurs, mais à quel prix ? L'objectif était de le mesurer plutôt que de le supposer.",
+        "Les MicroVMs isolent bien mieux les fonctions serverless que les conteneurs classiques, mais combien coûte cette isolation en énergie, et cela dépend-il du langage ? L'objectif était de le mesurer plutôt que de le supposer.",
       solution:
-        "Deux clusters Kubernetes avec Apache OpenWhisk : l'un avec des conteneurs classiques (containerd/runc), l'autre qui isole chaque fonction dans une MicroVM (Kata Containers sur QEMU). Kepler mesure l'énergie, Prometheus la stocke, Grafana l'affiche. Sur 60 tests, les MicroVMs consomment 6 à 9 fois plus d'énergie en démarrage à chaud.",
+        "Projet d'équipe à six. Deux clusters Kubernetes avec Apache OpenWhisk : l'un avec des conteneurs classiques (runc), l'autre qui isole chaque fonction dans une MicroVM avec Kata Containers. Kepler mesure l'énergie, Prometheus la stocke, Grafana l'affiche. Un benchmark CPU en Node.js, Python et Java, avec 5 démarrages à froid et 5 à chaud par langage et par cluster. À chaud, le coût est quasi identique (75 à 85 J) ; à froid, la MicroVM consomme 1,4 à 1,75 fois plus (137 à 175 J contre 98 à 103 J).",
       learned:
-        "Comment les runtimes de conteneurs et les MicroVMs diffèrent en profondeur, et comment construire un benchmark équitable pour appuyer un choix d'architecture sur des chiffres.",
+        "L'isolation se paie au démarrage, pas pendant l'exécution : garder les fonctions chaudes compte encore plus avec les MicroVMs. La JVM perd aussi son avantage en MicroVM, où Node.js est le plus efficace.",
       stack: ["Kubernetes", "OpenWhisk", "Kata Containers", "Kepler", "Prometheus", "Grafana"],
-      github: links.github + "/serverless-containers-vs-microvms",
+      privateNote: "Projet d'équipe · code sur les serveurs de l'ENSEEIHT",
     },
   ],
   qanda: [

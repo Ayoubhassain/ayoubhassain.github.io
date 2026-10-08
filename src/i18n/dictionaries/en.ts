@@ -199,15 +199,15 @@ export const en: Dictionary = {
     {
       id: "serverless-containers-vs-microvms",
       title: "Serverless: Containers vs. MicroVMs",
-      description: "A benchmark of the energy cost of stronger isolation for serverless functions on Kubernetes.",
+      description: "Measuring the energy cost of isolating serverless functions in MicroVMs, on Kubernetes with Apache OpenWhisk.",
       problem:
-        "MicroVMs isolate serverless functions better than containers, but at what cost? The goal was to measure it instead of guessing.",
+        "MicroVMs isolate serverless functions much better than standard containers, but how much energy does that isolation cost, and does it depend on the language? The goal was to measure it instead of guessing.",
       solution:
-        "Two Kubernetes clusters running Apache OpenWhisk: one with standard containers (containerd/runc), one isolating each function in a MicroVM (Kata Containers on QEMU). Kepler measures energy, Prometheus stores it, Grafana displays it. Over 60 tests, MicroVMs used 6 to 9 times more energy on warm starts.",
+        "A 6-person team project. Two Kubernetes clusters run Apache OpenWhisk: one with standard containers (runc), one isolating each function in a MicroVM with Kata Containers. Kepler measures the energy, Prometheus stores it, Grafana displays it. A CPU benchmark in Node.js, Python and Java ran 5 cold and 5 warm invocations per language on each cluster. Warm invocations cost about the same on both (75 to 85 J), but cold starts cost 1.4 to 1.75 times more under MicroVM (137 to 175 J vs 98 to 103 J).",
       learned:
-        "How container runtimes and MicroVMs differ under the hood, and how to build a fair benchmark to back an architecture decision with numbers.",
+        "Isolation is paid at startup, not during execution: keeping functions warm matters even more with MicroVMs. The JVM also lost its edge under MicroVM, where Node.js was the most efficient.",
       stack: ["Kubernetes", "OpenWhisk", "Kata Containers", "Kepler", "Prometheus", "Grafana"],
-      github: links.github + "/serverless-containers-vs-microvms",
+      privateNote: "Team project · code on ENSEEIHT servers",
     },
   ],
   qanda: [
