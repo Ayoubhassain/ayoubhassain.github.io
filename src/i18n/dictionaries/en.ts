@@ -207,7 +207,6 @@ export const en: Dictionary = {
       learned:
         "Isolation is paid at startup, not during execution: keeping functions warm matters even more with MicroVMs. The JVM also lost its edge under MicroVM, where Node.js was the most efficient.",
       stack: ["Kubernetes", "OpenWhisk", "Kata Containers", "Kepler", "Prometheus", "Grafana"],
-      privateNote: "Team project · code on ENSEEIHT servers",
     },
   ],
   qanda: [

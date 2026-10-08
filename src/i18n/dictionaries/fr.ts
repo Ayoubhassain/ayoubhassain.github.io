@@ -200,7 +200,6 @@ export const fr: Dictionary = {
       learned:
         "L'isolation se paie au démarrage, pas pendant l'exécution : garder les fonctions chaudes compte encore plus avec les MicroVMs. La JVM perd aussi son avantage en MicroVM, où Node.js est le plus efficace.",
       stack: ["Kubernetes", "OpenWhisk", "Kata Containers", "Kepler", "Prometheus", "Grafana"],
-      privateNote: "Projet d'équipe · code sur les serveurs de l'ENSEEIHT",
     },
   ],
   qanda: [
