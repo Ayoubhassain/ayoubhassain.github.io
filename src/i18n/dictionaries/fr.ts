@@ -73,8 +73,8 @@ export const fr: Dictionary = {
     skills:         "Compétences",
     languages:      "Langues",
     intro:
-      "Je suis ingénieur en génie logiciel, diplômé de l'ENSEEIHT (Toulouse INP). Ce que j'aime, c'est prendre une fonctionnalité de bout en bout : la concevoir, la coder côté front et côté back, la tester, puis la voir tourner en production.\n\nEn trois stages, je suis passé d'interfaces Angular chez SQLI à une application full stack Spring Boot et Angular à la Banque Centrale Populaire, puis à un SaaS en production chez Padoa, où j'ai aussi travaillé sur les tests E2E, la CI/CD et le déploiement Kubernetes.\n\nJe m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
-    quick: ["Basé à Paris", "Français, anglais (C1), allemand (A2)", "Disponible en novembre 2026"],
+      "Je suis ingénieur en génie logiciel, diplômé de l'ENSEEIHT (Toulouse INP). Je travaille des deux côtés d'une application : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Je m'occupe aussi de ce qui vient après le code : tests automatisés, CI/CD, déploiement et supervision en production.\n\nJe m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
+    quick: ["Basé à Paris", "Français, anglais (C1), allemand (A2)"],
     journeyTitle:   "Mon parcours en bref",
     journey: [
       { period: "2021 – 2023", place: "Benguérir", title: "Classes préparatoires", text: "MPSI puis MP* : deux ans de mathématiques et de physique intensives." },

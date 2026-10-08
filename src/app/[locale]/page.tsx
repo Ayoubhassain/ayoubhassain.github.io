@@ -36,6 +36,7 @@ export default async function HomePage({ params }: PageProps) {
   if (!isLocale(locale)) notFound();
 
   const t = getDictionary(locale);
+  const a = t.about;
   const featuredIds = ["spark-cluster-gcp", "ecommerce-fullstack", "serverless-containers-vs-microvms"];
   const featured = featuredIds
     .map((id) => t.projects.find((project) => project.id === id))
@@ -67,11 +68,6 @@ export default async function HomePage({ params }: PageProps) {
                 {t.profile.headline}
               </p>
 
-              <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-light md:text-lg">
-                {t.home.proofPoint}
-              </p>
-
-              <p className="mt-4 text-sm text-ink-light">{t.home.locationLine}</p>
 
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <LinkButton href={`/${locale}/projects`} variant="primary">
@@ -106,34 +102,52 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* About: who I am, in a few lines */}
+      <section id="about" className="scroll-mt-20 border-b border-border">
+        <div className={`${SECTION} grid gap-8 md:grid-cols-[14rem_1fr] md:gap-12`}>
+          <p className={LABEL}>{a.label}</p>
+          <div>
+            <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-ink-muted">
+              {a.intro.split("\n\n").map((para) => (
+                <p key={para.slice(0, 24)}>{para}</p>
+              ))}
+            </div>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {a.quick.map((item) => (
+                <li key={item} className="rounded-full border border-border bg-bg-subtle px-3 py-1 text-sm text-ink">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Path in brief: from prépa to the next job */}
       <section className="border-b border-border">
         <div className={SECTION}>
-          <div className="mb-8 flex items-baseline justify-between gap-4">
-            <p className="text-xs font-semibold tracking-[0.15em] text-accent uppercase">
-              {t.home.experience}
-            </p>
-            <Link
-              href={`/${locale}/resume`}
-              className="text-sm text-ink-muted transition-colors hover:text-accent"
-            >
+          <div className="mb-10 flex items-baseline justify-between gap-4">
+            <p className={LABEL}>{a.journeyTitle}</p>
+            <Link href={`/${locale}/resume`} className="text-sm text-ink-muted transition-colors hover:text-accent">
               {t.home.seeResume}
             </Link>
           </div>
-
-          <ol className="divide-y divide-border border-y border-border">
-            {t.experience.map((entry) => (
+          <ol className="grid gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
+            {a.journey.map((step) => (
               <li
-                key={entry.company}
-                className="grid gap-1 py-6 md:grid-cols-[14rem_1fr_auto] md:items-baseline md:gap-8"
+                key={step.title}
+                className={`relative border-t-2 pt-5 ${step.next ? "border-dashed border-available/60" : "border-border"}`}
               >
-                <span className="font-semibold text-ink">{entry.company}</span>
-                <div>
-                  <p className="text-ink">{entry.role}</p>
-                  {entry.summary && (
-                    <p className="mt-1 text-sm leading-relaxed text-ink-muted">{entry.summary}</p>
-                  )}
-                </div>
-                <span className="text-sm text-ink-light md:text-right">{entry.period}</span>
+                <span
+                  aria-hidden="true"
+                  className={`absolute -top-[7px] left-0 h-3 w-3 rounded-full ring-4 ring-bg ${step.next ? "bg-available" : "bg-accent"}`}
+                />
+                <p className={`text-sm font-semibold ${step.next ? "text-available" : "text-accent"}`}>
+                  {step.period}
+                  {step.place && <span className="font-normal text-ink-light"> · {step.place}</span>}
+                </p>
+                <h3 className="mt-1 text-lg font-semibold text-ink">{step.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-ink-muted">{step.text}</p>
               </li>
             ))}
           </ol>
@@ -143,9 +157,7 @@ export default async function HomePage({ params }: PageProps) {
       <section className="bg-bg-subtle">
         <div className={SECTION}>
           <div className="mb-8 flex items-baseline justify-between gap-4">
-            <p className="text-xs font-semibold tracking-[0.15em] text-accent uppercase">
-              {t.home.inDepth}
-            </p>
+            <p className={LABEL}>{t.home.inDepth}</p>
             <Link
               href={`/${locale}/projects`}
               className="text-sm text-ink-muted transition-colors hover:text-accent"
@@ -179,11 +191,25 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* How I work */}
       <section className="border-b border-border">
         <div className={SECTION}>
-          <p className="mb-8 text-xs font-semibold tracking-[0.15em] text-ink-light uppercase">
-            {t.home.focusedOn}
-          </p>
+          <p className={`${LABEL} mb-8`}>{a.workTitle}</p>
+          <div className="grid gap-4 md:grid-cols-3">
+            {a.work.map((item, index) => (
+              <div key={item.title} className="rounded-2xl border border-border bg-bg-subtle p-6">
+                <p className="mb-3 text-sm font-semibold text-accent">0{index + 1}</p>
+                <h3 className="mb-2 font-semibold text-ink">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-ink-muted">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border">
+        <div className={SECTION}>
+          <p className={`${LABEL} mb-8`}>{t.home.focusedOn}</p>
           <div className="grid gap-8 sm:grid-cols-3">
             {t.profile.stack.map((group) => (
               <div key={group.label}>
@@ -207,3 +233,4 @@ export default async function HomePage({ params }: PageProps) {
 }
 
 const SECTION = "mx-auto max-w-5xl px-6 py-12 md:py-16";
+const LABEL = "text-xs font-semibold tracking-[0.15em] text-accent uppercase";

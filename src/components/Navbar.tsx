@@ -14,7 +14,7 @@ export default function Navbar({ locale }: NavbarProps) {
   const [first, ...rest] = t.profile.name.split(" ");
 
   const navLinks = [
-    { href: `/${locale}/about`,     label: t.nav.about },
+    { href: `/${locale}#about`,     label: t.nav.about },
     { href: `/${locale}/projects`,  label: t.nav.projects },
     { href: `/${locale}/resume`,    label: t.nav.resume },
     { href: `/${locale}/interview`, label: t.nav.qanda },

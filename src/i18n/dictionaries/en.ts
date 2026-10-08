@@ -80,8 +80,8 @@ export const en: Dictionary = {
     skills:         "Skills",
     languages:      "Languages",
     intro:
-      "I'm a software engineer, graduated from ENSEEIHT (Toulouse INP). What I enjoy is taking a feature end to end: designing it, building the front end and the back end, testing it, then seeing it run in production.\n\nOver three internships, I went from Angular interfaces at SQLI, to a full stack Spring Boot and Angular application at Banque Centrale Populaire, to a SaaS in production at Padoa, where I also worked on E2E tests, CI/CD and Kubernetes deployments.\n\nI'm also interested in AI and how it is changing software development.",
-    quick: ["Based in Paris", "French, English (C1), German (A2)", "Available from November 2026"],
+      "I'm a software engineer, graduated from ENSEEIHT (Toulouse INP). I work on both sides of an application: Angular and TypeScript on the front end, Node.js and Java/Spring Boot on the back end. I also take care of what comes after the code: automated tests, CI/CD, deployment and monitoring in production.\n\nI'm also interested in AI and how it is changing software development.",
+    quick: ["Based in Paris", "French, English (C1), German (A2)"],
     journeyTitle:   "My path in brief",
     journey: [
       { period: "2021 – 2023", place: "Benguérir", title: "Preparatory classes", text: "MPSI then MP*: two years of intensive mathematics and physics." },
