@@ -3,18 +3,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type NavLinksProps = {
-  links: { href: string; label: string }[];
-};
+export type NavLink = { href: string; label: string; exact?: boolean };
 
-/** Menu links: grey pill on hover, and on the page you are currently on. */
-export default function NavLinks({ links }: NavLinksProps) {
+/** The home link is only active on the home page itself, the others on their page and below. */
+export function isActive(link: NavLink, pathname: string) {
+  const path = pathname.replace(/\/$/, "");
+  return link.exact ? path === link.href : path.startsWith(link.href);
+}
+
+/** Menu links on tablet and desktop: grey pill on hover, and on the current page. */
+export default function NavLinks({ links }: { links: NavLink[] }) {
   const pathname = usePathname();
 
   return (
     <ul className="hidden items-center gap-1 sm:flex">
       {links.map((link) => {
-        const active = !link.href.includes("#") && pathname.startsWith(link.href);
+        const active = isActive(link, pathname);
         return (
           <li key={link.href}>
             <Link

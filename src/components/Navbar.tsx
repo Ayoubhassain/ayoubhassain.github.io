@@ -3,7 +3,8 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import Link from "next/link";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
-import NavLinks from "@/components/NavLinks";
+import NavLinks, { type NavLink } from "@/components/NavLinks";
+import MobileMenu from "@/components/MobileMenu";
 
 type NavbarProps = {
   locale: Locale;
@@ -13,8 +14,8 @@ export default function Navbar({ locale }: NavbarProps) {
   const t = getDictionary(locale);
   const [first, ...rest] = t.profile.name.split(" ");
 
-  const navLinks = [
-    { href: `/${locale}#about`,     label: t.nav.about },
+  const navLinks: NavLink[] = [
+    { href: `/${locale}`,           label: t.nav.home, exact: true },
     { href: `/${locale}/projects`,  label: t.nav.projects },
     { href: `/${locale}/resume`,    label: t.nav.resume },
     { href: `/${locale}/interview`, label: t.nav.qanda },
@@ -43,6 +44,7 @@ export default function Navbar({ locale }: NavbarProps) {
           <NavLinks links={navLinks} />
           <ThemeToggle lightLabel={t.nav.themeLight} darkLabel={t.nav.themeDark} />
           <LocaleSwitcher />
+          <MobileMenu links={navLinks} label={t.nav.menu} />
         </div>
       </nav>
     </header>

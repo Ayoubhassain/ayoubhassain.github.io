@@ -8,7 +8,7 @@ import IconLink, { LINKEDIN_PATH } from "@/components/ui/IconLink";
 /** "Hiring?" call to action, shown at the bottom of the home and projects pages. */
 export default function ContactSection({ t, id }: { t: Dictionary; id?: string }) {
   return (
-    <section id={id} className="scroll-mt-20 bg-bg-subtle">
+    <section id={id} className="scroll-mt-20 border-t border-border bg-bg-subtle">
       <div className="mx-auto max-w-5xl px-6 py-12 md:py-16">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
