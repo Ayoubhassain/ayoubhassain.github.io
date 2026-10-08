@@ -8,14 +8,12 @@ export type Dictionary = {
     projects: { title: string; description: string };
     resume: { title: string; description: string };
     qanda: { title: string; description: string };
-    contact: { title: string; description: string };
   };
   nav: {
     about: string;
     projects: string;
     resume: string;
     qanda: string;
-    contact: string;
     themeLight: string;
     themeDark: string;
   };
@@ -32,35 +30,20 @@ export type Dictionary = {
     available: string;
     experience: string;
     seeResume: string;
-    allProjects: string;
-    contactTitle: string;
-    contactText: string;
-    sendEmail: string;
-    emailSubject: string;
-    emailApp: string;
-    copyEmail: string;
-    copied: string;
   };
   about: {
     label: string;
     title: string;
     subtitle: string;
+    basedIn: string;
+    reachMe: string;
     skills: string;
     languages: string;
-    intro: string;
-    quick: string[];
-    journeyTitle: string;
-    journey: { period: string; place: string; title: string; text: string; next?: boolean }[];
-    workTitle: string;
-    work: { title: string; text: string }[];
   };
   projectsPage: {
     label: string;
     title: string;
     subtitle: string;
-    filterAll: string;
-    filterDev: string;
-    filterDevops: string;
   };
   resume: {
     label: string;
@@ -73,29 +56,11 @@ export type Dictionary = {
     downloadEn: string;
     downloadFr: string;
     live: string;
-    seeProject: string;
   };
   qandaPage: {
     label: string;
     title: string;
     subtitle: string;
-  };
-  contactPage: {
-    label: string;
-    title: string;
-    subtitle: string;
-    emailTitle: string;
-    emailText: string;
-    phoneTitle: string;
-    phoneText: string;
-    call: string;
-    linkedinText: string;
-    githubText: string;
-    resumeTitle: string;
-    resumeText: string;
-    lookingTitle: string;
-    looking: string[];
-    open: string;
   };
   projectCard: {
     problem: string;
@@ -103,10 +68,6 @@ export type Dictionary = {
     learned: string;
     github: string;
     liveDemo: string;
-    details: string;
-    hideDetails: string;
-    architecture: string;
-    kinds: { personal: string; team: string; course: string };
   };
   profile: {
     name: string;
@@ -116,8 +77,7 @@ export type Dictionary = {
     bio: string;
     location: string;
     email: string;
-    phone: { display: string; href: string };
-    stack: { label: string; items: string[] }[];
+    stack: string[];
     spokenLanguages: { name: string; level: string }[];
   };
   experience: ExperienceEntry[];
