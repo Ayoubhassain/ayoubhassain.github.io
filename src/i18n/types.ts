@@ -52,6 +52,9 @@ export type Dictionary = {
     label: string;
     title: string;
     subtitle: string;
+    filterAll: string;
+    filterDev: string;
+    filterDevops: string;
   };
   resume: {
     label: string;
@@ -76,6 +79,10 @@ export type Dictionary = {
     learned: string;
     github: string;
     liveDemo: string;
+    details: string;
+    hideDetails: string;
+    architecture: string;
+    kinds: { personal: string; team: string; course: string };
   };
   profile: {
     name: string;

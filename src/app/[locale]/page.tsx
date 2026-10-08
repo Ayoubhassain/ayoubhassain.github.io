@@ -8,7 +8,7 @@ import { withBasePath } from "@/lib/base-path";
 import { links } from "@/i18n/dictionaries/en";
 import LinkButton from "@/components/ui/LinkButton";
 import Tag from "@/components/ui/Tag";
-import CopyEmail from "@/components/ui/CopyEmail";
+import ContactSection from "@/components/ContactSection";
 import IconLink, { GITHUB_PATH, LINKEDIN_PATH } from "@/components/ui/IconLink";
 
 type PageProps = {
@@ -201,32 +201,7 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-20 bg-bg-subtle">
-        <div className={SECTION}>
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div>
-              <h2 className="text-2xl font-bold tracking-tight text-ink">
-                {t.home.contactTitle}
-              </h2>
-              <p className="mt-2 text-ink-muted">{t.home.contactText}</p>
-              <div className="mt-5">
-                <CopyEmail email={t.profile.email} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
-              </div>
-            </div>
-            <div className="flex shrink-0 flex-wrap items-center gap-3 md:flex-nowrap">
-              <LinkButton href={`mailto:${t.profile.email}`} variant="primary">
-                {t.home.sendEmail}
-              </LinkButton>
-              <LinkButton href={t.resumePdf} download variant="ghost">
-                {t.home.downloadResume}
-              </LinkButton>
-              <IconLink href={links.linkedin} label="LinkedIn">
-                <path d={LINKEDIN_PATH} />
-              </IconLink>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactSection t={t} id="contact" />
     </div>
   );
 }

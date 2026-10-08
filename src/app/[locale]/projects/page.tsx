@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { buildPageMetadata } from "@/lib/site-metadata";
+import ProjectsBrowser from "@/components/ProjectsBrowser";
+import ContactSection from "@/components/ContactSection";
 import PageContainer from "@/components/layout/PageContainer";
 import SectionHeader from "@/components/ui/SectionHeader";
-import ProjectCard from "@/components/ui/ProjectCard";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -34,20 +35,24 @@ export default async function ProjectsPage({ params }: PageProps) {
   const t = getDictionary(locale);
 
   return (
-    <PageContainer>
-      <SectionHeader
-        label={t.projectsPage.label}
-        title={t.projectsPage.title}
-        subtitle={t.projectsPage.subtitle}
-      />
-
-      <ul className="space-y-8">
-        {t.projects.map((project) => (
-          <li key={project.id} id={project.id} className="scroll-mt-24">
-            <ProjectCard project={project} labels={t.projectCard} />
-          </li>
-        ))}
-      </ul>
-    </PageContainer>
+    <>
+      <PageContainer>
+        <SectionHeader
+          label={t.projectsPage.label}
+          title={t.projectsPage.title}
+          subtitle={t.projectsPage.subtitle}
+        />
+        <ProjectsBrowser
+          projects={t.projects}
+          labels={t.projectCard}
+          filters={{
+            all: t.projectsPage.filterAll,
+            dev: t.projectsPage.filterDev,
+            devops: t.projectsPage.filterDevops,
+          }}
+        />
+      </PageContainer>
+      <ContactSection t={t} />
+    </>
   );
 }
