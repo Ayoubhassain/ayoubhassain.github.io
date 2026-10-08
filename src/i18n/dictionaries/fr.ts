@@ -112,9 +112,12 @@ export const fr: Dictionary = {
   contactPage: {
     label:        "Contact",
     title:        "Travaillons ensemble.",
-    subtitle:     "Je suis disponible pour un CDI full stack ou DevOps à partir de novembre 2026. Le plus simple pour me joindre : par email ou sur LinkedIn.",
+    subtitle:     "Je suis disponible pour un CDI full stack ou DevOps à partir de novembre 2026. Le plus simple pour me joindre : par email, par téléphone ou sur LinkedIn.",
     emailTitle:   "Email",
     emailText:    "Écrivez-moi directement, ou copiez l'adresse.",
+    phoneTitle:   "Téléphone",
+    phoneText:    "Appelez-moi ou laissez un message.",
+    call:         "Appeler",
     linkedinText: "Mon profil professionnel et mon parcours.",
     githubText:   "Le code de mes projets.",
     resumeTitle:  "CV",
@@ -144,6 +147,7 @@ export const fr: Dictionary = {
       "Ingénieur en génie logiciel, diplômé de l'ENSEEIHT (Toulouse INP).\n\nAu fil de trois expériences, j'ai conçu et fait évoluer des applications web des deux côtés : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Chez Padoa, j'ai aussi travaillé sur ce qui se passe après le code : tests E2E automatisés, pipelines CI, déploiements Docker et Kubernetes, supervision en production.\n\nJe recherche un CDI à partir de novembre 2026. Je m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
+    phone:    { display: "+33 7 68 82 85 10", href: "tel:+33768828510" },
     stack: [
       { label: "Développement", items: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot"] },
       { label: "Données", items: ["PostgreSQL", "MySQL"] },

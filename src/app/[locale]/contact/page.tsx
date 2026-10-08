@@ -50,15 +50,27 @@ export default async function ContactPage({ params }: PageProps) {
       <SectionHeader label={c.label} title={c.title} subtitle={c.subtitle} />
 
       <div className="grid gap-4 md:grid-cols-2">
-        {/* Email, the main way to get in touch */}
-        <div className="rounded-2xl border border-border bg-bg p-6 shadow-sm md:col-span-2">
-          <h2 className="text-lg font-semibold text-ink">{c.emailTitle}</h2>
-          <p className="mt-1 text-sm text-ink-muted">{c.emailText}</p>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            <CopyEmail email={t.profile.email} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
-            <LinkButton href={`mailto:${t.profile.email}`} variant="primary">
-              {t.home.sendEmail}
-            </LinkButton>
+        {/* Email and phone, the main ways to get in touch */}
+        <div className="grid gap-6 rounded-2xl border border-border bg-bg p-6 shadow-sm md:col-span-2 md:grid-cols-[3fr_2fr] md:gap-0">
+          <div className="md:pr-6">
+            <h2 className="text-lg font-semibold text-ink">{c.emailTitle}</h2>
+            <p className="mt-1 text-sm text-ink-muted">{c.emailText}</p>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <CopyEmail email={t.profile.email} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
+              <LinkButton href={`mailto:${t.profile.email}`} variant="primary">
+                {t.home.sendEmail}
+              </LinkButton>
+            </div>
+          </div>
+          <div className="border-t border-border pt-6 md:border-t-0 md:border-l md:pt-0 md:pl-6">
+            <h2 className="text-lg font-semibold text-ink">{c.phoneTitle}</h2>
+            <p className="mt-1 text-sm text-ink-muted">{c.phoneText}</p>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <CopyEmail email={t.profile.phone.display} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
+              <LinkButton href={t.profile.phone.href} variant="ghost">
+                {c.call}
+              </LinkButton>
+            </div>
           </div>
         </div>
 

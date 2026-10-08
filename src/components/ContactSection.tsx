@@ -13,8 +13,9 @@ export default function ContactSection({ t, id }: { t: Dictionary; id?: string }
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-ink">{t.home.contactTitle}</h2>
             <p className="mt-2 text-ink-muted">{t.home.contactText}</p>
-            <div className="mt-5">
+            <div className="mt-5 flex flex-wrap gap-3">
               <CopyEmail email={t.profile.email} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
+              <CopyEmail email={t.profile.phone.display} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
             </div>
           </div>
           <div className="flex shrink-0 flex-wrap items-center gap-3 md:flex-nowrap">

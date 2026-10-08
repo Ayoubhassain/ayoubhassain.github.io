@@ -119,9 +119,12 @@ export const en: Dictionary = {
   contactPage: {
     label:        "Contact",
     title:        "Let's work together.",
-    subtitle:     "I'm available for a full-time full stack or DevOps role from November 2026. The quickest way to reach me is by email or on LinkedIn.",
+    subtitle:     "I'm available for a full-time full stack or DevOps role from November 2026. The quickest way to reach me is by email, phone or LinkedIn.",
     emailTitle:   "Email",
     emailText:    "Write to me directly, or copy the address.",
+    phoneTitle:   "Phone",
+    phoneText:    "Call me or leave a message.",
+    call:         "Call",
     linkedinText: "My professional profile and experience.",
     githubText:   "The code of my projects.",
     resumeTitle:  "Resume",
@@ -151,6 +154,7 @@ export const en: Dictionary = {
       "I'm a software engineer from ENSEEIHT (Toulouse INP).\n\nAcross three experiences, I have built and evolved web applications on both sides: Angular and TypeScript on the front end, Node.js and Java/Spring Boot on the back end. At Padoa, I also worked on what happens after the code is written: automated end-to-end tests, CI pipelines, Docker and Kubernetes deployments, and production monitoring.\n\nI'm looking for a full-time role from November 2026. I'm also interested in AI and how it changes the way we build software.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
+    phone:    { display: "+33 7 68 82 85 10", href: "tel:+33768828510" },
     stack: [
       { label: "Development", items: ["Angular", "TypeScript", "Node.js", "Java", "Spring Boot"] },
       { label: "Data", items: ["PostgreSQL", "MySQL"] },

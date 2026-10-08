@@ -33,7 +33,7 @@ export default function LinkButton({
     );
   }
 
-  if (external || href.startsWith("mailto:") || href.startsWith("#")) {
+  if (external || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("#")) {
     return (
       <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined} className={className}>
         {children}

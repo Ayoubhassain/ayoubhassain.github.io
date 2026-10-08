@@ -81,6 +81,9 @@ export type Dictionary = {
     subtitle: string;
     emailTitle: string;
     emailText: string;
+    phoneTitle: string;
+    phoneText: string;
+    call: string;
     linkedinText: string;
     githubText: string;
     resumeTitle: string;
@@ -108,6 +111,7 @@ export type Dictionary = {
     bio: string;
     location: string;
     email: string;
+    phone: { display: string; href: string };
     stack: { label: string; items: string[] }[];
     spokenLanguages: { name: string; level: string }[];
   };
