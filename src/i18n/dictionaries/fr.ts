@@ -166,27 +166,27 @@ export const fr: Dictionary = {
     {
       id: "ecommerce-fullstack",
       title: "Plateforme e-commerce",
-      description: "Une application e-commerce full stack : API REST Spring Boot et frontend Angular.",
+      description: "Une boutique Spring Boot et Angular que j'ai enrichie d'une authentification JWT, d'un espace admin et de tests d'intégration.",
       problem:
-        "Construire une application web complète, du modèle de données à l'interface, avec de vraies fonctionnalités : comptes, catalogue, panier, commandes et espace administrateur.",
+        "Partir d'une base e-commerce existante (catalogue, panier, commande) et la rapprocher d'une application de production : comptes utilisateurs, rôles, back-office d'administration, et une API qui ne fait pas confiance au navigateur.",
       solution:
-        "Une API REST Spring Boot avec JPA/Hibernate et PostgreSQL, et un frontend Angular. Authentification, catalogue et recherche, panier et commandes, espace administrateur pour gérer produits et commandes.",
+        "Basé sur le projet du cours luv2code. J'ai ajouté l'inscription et la connexion avec Spring Security et JWT (BCrypt, rôles USER et ADMIN), un espace admin pour gérer produits et commandes, une page « Mes commandes », le calcul des prix côté serveur à la commande, la fermeture de données que Spring Data REST exposait publiquement, et des tests d'intégration avec MockMvc et H2. MySQL tourne avec Docker Compose.",
       learned:
-        "Concevoir l'API et le modèle de données en premier, pour que le frontend reste simple et que chaque fonctionnalité s'intègre proprement.",
-      stack: ["Java", "Spring Boot", "JPA/Hibernate", "Angular", "TypeScript", "PostgreSQL"],
+        "La sécurité se joue côté backend : le guard Angular ne fait que cacher des pages, ce sont le filtre JWT et les règles de rôles qui décident de ce que l'API autorise.",
+      stack: ["Java", "Spring Boot", "Spring Security", "JWT", "Angular", "MySQL", "Docker"],
       github: links.github + "/ecommerce-fullstack",
     },
     {
       id: "pokemon-rest-api",
       title: "API REST Pokémon",
-      description: "Une API REST en Node.js et Express, avec authentification JWT, validation et tests d'intégration.",
+      description: "Une API REST en Node.js et Express, avec authentification JWT, validation des données et base MariaDB.",
       problem:
-        "Écrire une API qui ne soit pas seulement fonctionnelle mais propre : routes protégées, données validées, endpoints testés, et une installation que tout le monde peut lancer.",
+        "Écrire une API qui ne soit pas seulement fonctionnelle mais propre : routes protégées, données validées, messages d'erreur clairs et règles métier centralisées.",
       solution:
-        "Une API CRUD en Node.js/Express avec PostgreSQL. Les routes sont protégées par JWT, les données sont validées avant d'atteindre la base, et des tests d'intégration couvrent les principaux endpoints. Le tout se lance avec Docker Compose.",
+        "Une API CRUD en Node.js/Express avec Sequelize et MariaDB, et une recherche par nom. Les utilisateurs se connectent avec un mot de passe haché par bcrypt et reçoivent un JWT qui protège toutes les routes. Les validateurs Sequelize contrôlent chaque champ (bornes, nom unique, URL valide, types autorisés) et l'API renvoie des erreurs JSON cohérentes.",
       learned:
-        "À quel point les tests et la validation changent la confiance qu'on a dans une API, et pourquoi une installation Docker en une commande compte pour le développeur suivant.",
-      stack: ["Node.js", "Express", "PostgreSQL", "JWT", "Docker"],
+        "Mettre les règles métier dans le modèle de données garde les routes simples, et les secrets ont leur place dans des variables d'environnement, jamais dans le code.",
+      stack: ["Node.js", "Express", "Sequelize", "MariaDB", "JWT", "bcrypt"],
       github: links.github + "/pokemon-rest-api",
     },
     {

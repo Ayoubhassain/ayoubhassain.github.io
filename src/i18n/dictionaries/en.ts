@@ -173,27 +173,27 @@ export const en: Dictionary = {
     {
       id: "ecommerce-fullstack",
       title: "E-commerce Platform",
-      description: "A full stack e-commerce application with a Spring Boot REST API and an Angular front end.",
+      description: "A Spring Boot and Angular shop that I extended with JWT authentication, an admin area and integration tests.",
       problem:
-        "Build a complete web application, from the data model to the user interface, with real features: accounts, catalog, cart, orders and an admin area.",
+        "Start from an existing e-commerce base (catalog, cart, checkout) and turn it into an application closer to production: user accounts, roles, an admin back office, and an API that does not trust the browser.",
       solution:
-        "A Spring Boot REST API with JPA/Hibernate and PostgreSQL, and an Angular front end. Authentication, product catalog and search, cart and orders, and an admin area to manage products and orders.",
+        "Built on the luv2code course project. I added sign up and login with Spring Security and JWT (BCrypt, USER and ADMIN roles), an admin area to manage products and orders, a My orders page, server-side price calculation at checkout, closed data that Spring Data REST exposed publicly, and integration tests with MockMvc and H2. MySQL runs with Docker Compose.",
       learned:
-        "Designing a REST API and its data model first, so the front end stays simple and each feature fits cleanly into the existing structure.",
-      stack: ["Java", "Spring Boot", "JPA/Hibernate", "Angular", "TypeScript", "PostgreSQL"],
+        "Security has to live on the backend: the Angular guard only hides pages, while the JWT filter and the role rules decide what the API allows.",
+      stack: ["Java", "Spring Boot", "Spring Security", "JWT", "Angular", "MySQL", "Docker"],
       github: links.github + "/ecommerce-fullstack",
     },
     {
       id: "pokemon-rest-api",
       title: "Pokémon REST API",
-      description: "A REST API in Node.js and Express, with JWT authentication, validation and integration tests.",
+      description: "A REST API in Node.js and Express, with JWT authentication, data validation and a MariaDB database.",
       problem:
-        "Write an API that is not just functional but clean: protected routes, validated input, tested endpoints, and a setup anyone can run.",
+        "Write an API that is not just functional but clean: protected routes, validated input, clear error messages, and business rules in one place.",
       solution:
-        "A CRUD API in Node.js/Express backed by PostgreSQL. JWT protects the routes, incoming data is validated before reaching the database, and integration tests cover the main endpoints. Everything runs with Docker Compose.",
+        "A CRUD API in Node.js/Express with Sequelize and MariaDB, plus search by name. Users log in with a bcrypt-hashed password and get a JWT that protects every route. Sequelize validators check each field (ranges, unique name, valid URL, allowed types) and the API returns consistent JSON errors.",
       learned:
-        "How much testing and validation change the confidence you have in an API, and why a one-command Docker setup matters for the next developer.",
-      stack: ["Node.js", "Express", "PostgreSQL", "JWT", "Docker"],
+        "Putting business rules in the data model keeps routes simple, and secrets belong in environment variables, never in the code.",
+      stack: ["Node.js", "Express", "Sequelize", "MariaDB", "JWT", "bcrypt"],
       github: links.github + "/pokemon-rest-api",
     },
     {
