@@ -13,7 +13,7 @@ type LinkButtonProps = {
 
 const variantStyles: Record<LinkButtonVariant, string> = {
   primary: "bg-accent text-bg hover:bg-accent-hover",
-  ghost:   "border border-border text-ink hover:border-accent hover:text-accent",
+  ghost:   "border border-border text-ink hover:border-accent hover:bg-bg-subtle hover:text-accent",
 };
 
 export default function LinkButton({
@@ -33,7 +33,7 @@ export default function LinkButton({
     );
   }
 
-  if (external || href.startsWith("mailto:")) {
+  if (external || href.startsWith("mailto:") || href.startsWith("#")) {
     return (
       <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined} className={className}>
         {children}

@@ -41,6 +41,7 @@ export const en: Dictionary = {
     projects:  "Projects",
     resume:    "Resume",
     qanda:     "Q&A",
+    contact:   "Contact",
     themeLight: "Switch to light mode",
     themeDark:  "Switch to night mode",
   },
@@ -61,6 +62,9 @@ export const en: Dictionary = {
     allProjects:    "All projects →",
     contactTitle:   "Hiring for a full stack or DevOps role?",
     contactText:    "I'm available from November 2026. Let's talk.",
+    sendEmail:      "Send an email",
+    copyEmail:      "Copy",
+    copied:         "Copied!",
   },
   about: {
     label:          "About",
@@ -107,7 +111,7 @@ export const en: Dictionary = {
     headline:
       "I build web applications end to end, and ship them to production.",
     bio:
-      "I'm a computer science and telecommunications engineer from ENSEEIHT (Toulouse INP), with a major in Infrastructure and Big Data.\n\nAcross three experiences, I have built and evolved web applications on both sides: Angular and TypeScript on the front end, Node.js and Java/Spring Boot on the back end. At Padoa, I also worked on what happens after the code is written: automated end-to-end tests, CI pipelines, Docker and Kubernetes deployments, and production monitoring.\n\nI'm looking for a full-time role from November 2026. I'm also interested in AI and how it changes the way we build software.",
+      "I'm a software engineer from ENSEEIHT (Toulouse INP).\n\nAcross three experiences, I have built and evolved web applications on both sides: Angular and TypeScript on the front end, Node.js and Java/Spring Boot on the back end. At Padoa, I also worked on what happens after the code is written: automated end-to-end tests, CI pipelines, Docker and Kubernetes deployments, and production monitoring.\n\nI'm looking for a full-time role from November 2026. I'm also interested in AI and how it changes the way we build software.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
     stack: [
@@ -153,7 +157,7 @@ export const en: Dictionary = {
       company: "Toulouse INP – ENSEEIHT",
       period: "2023 – 2026",
       description:
-        "Java, C++, object-oriented design, databases, networks, cloud computing. Major in Infrastructure and Big Data.",
+        "Software engineering: Java, C++, object-oriented design, databases, networks, cloud computing.",
     },
     {
       role: "Classes préparatoires MPSI – MP*",

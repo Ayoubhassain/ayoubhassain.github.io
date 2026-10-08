@@ -14,6 +14,7 @@ export type Dictionary = {
     projects: string;
     resume: string;
     qanda: string;
+    contact: string;
     themeLight: string;
     themeDark: string;
   };
@@ -33,6 +34,9 @@ export type Dictionary = {
     allProjects: string;
     contactTitle: string;
     contactText: string;
+    sendEmail: string;
+    copyEmail: string;
+    copied: string;
   };
   about: {
     label: string;

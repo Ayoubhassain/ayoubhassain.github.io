@@ -3,6 +3,7 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import Link from "next/link";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import ThemeToggle from "@/components/ThemeToggle";
+import NavLinks from "@/components/NavLinks";
 
 type NavbarProps = {
   locale: Locale;
@@ -17,6 +18,7 @@ export default function Navbar({ locale }: NavbarProps) {
     { href: `/${locale}/projects`,  label: t.nav.projects },
     { href: `/${locale}/resume`,    label: t.nav.resume },
     { href: `/${locale}/interview`, label: t.nav.qanda },
+    { href: `/${locale}#contact`,   label: t.nav.contact },
   ];
 
   return (
@@ -27,19 +29,8 @@ export default function Navbar({ locale }: NavbarProps) {
           <span className="font-light text-ink-muted">{rest.join(" ")}</span>
         </Link>
 
-        <div className="flex items-center gap-3 sm:gap-6">
-          <ul className="hidden sm:flex gap-8">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-[15px] text-ink-muted transition-colors hover:text-ink"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className="flex items-center gap-3 sm:gap-4">
+          <NavLinks links={navLinks} />
           <ThemeToggle lightLabel={t.nav.themeLight} darkLabel={t.nav.themeDark} />
           <LocaleSwitcher />
         </div>

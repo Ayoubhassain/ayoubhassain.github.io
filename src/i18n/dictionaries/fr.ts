@@ -34,6 +34,7 @@ export const fr: Dictionary = {
     projects:  "Projets",
     resume:    "CV",
     qanda:     "Q&R",
+    contact:   "Contact",
     themeLight: "Passer en mode clair",
     themeDark:  "Passer en mode nuit",
   },
@@ -54,6 +55,9 @@ export const fr: Dictionary = {
     allProjects:    "Tous les projets →",
     contactTitle:   "Un poste full stack ou DevOps à pourvoir\u00a0?",
     contactText:    "Je suis disponible à partir de novembre 2026. Parlons-en.",
+    sendEmail:      "Envoyer un email",
+    copyEmail:      "Copier",
+    copied:         "Copié !",
   },
   about: {
     label:          "À propos",
@@ -100,7 +104,7 @@ export const fr: Dictionary = {
     headline:
       "Je développe des applications web de bout en bout, et je les mets en production.",
     bio:
-      "Ingénieur en informatique et télécommunications diplômé de l'ENSEEIHT (Toulouse INP), filière Infrastructure et Big Data.\n\nAu fil de trois expériences, j'ai conçu et fait évoluer des applications web des deux côtés : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Chez Padoa, j'ai aussi travaillé sur ce qui se passe après le code : tests E2E automatisés, pipelines CI, déploiements Docker et Kubernetes, supervision en production.\n\nJe recherche un CDI à partir de novembre 2026. Je m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
+      "Ingénieur en génie logiciel, diplômé de l'ENSEEIHT (Toulouse INP).\n\nAu fil de trois expériences, j'ai conçu et fait évoluer des applications web des deux côtés : Angular et TypeScript en front-end, Node.js et Java/Spring Boot en back-end. Chez Padoa, j'ai aussi travaillé sur ce qui se passe après le code : tests E2E automatisés, pipelines CI, déploiements Docker et Kubernetes, supervision en production.\n\nJe recherche un CDI à partir de novembre 2026. Je m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
     location: "Paris, France",
     email:    "ayoubhassain2233@gmail.com",
     stack: [
@@ -146,7 +150,7 @@ export const fr: Dictionary = {
       company: "Toulouse INP – ENSEEIHT",
       period: "2023 – 2026",
       description:
-        "Java, C++, conception orientée objet, bases de données, réseaux, cloud. Filière Infrastructure et Big Data.",
+        "Génie logiciel : Java, C++, conception orientée objet, bases de données, réseaux, cloud.",
     },
     {
       role: "Classes préparatoires MPSI – MP*",

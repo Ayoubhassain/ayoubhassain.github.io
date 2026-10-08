@@ -8,6 +8,7 @@ import { withBasePath } from "@/lib/base-path";
 import { links } from "@/i18n/dictionaries/en";
 import LinkButton from "@/components/ui/LinkButton";
 import Tag from "@/components/ui/Tag";
+import CopyEmail from "@/components/ui/CopyEmail";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -78,7 +79,7 @@ export default async function HomePage({ params }: PageProps) {
                 <LinkButton href={t.resumePdf} download variant="ghost">
                   {t.home.downloadResume}
                 </LinkButton>
-                <LinkButton href={`mailto:${t.profile.email}`} variant="ghost">
+                <LinkButton href="#contact" variant="ghost">
                   {t.home.contactMe}
                 </LinkButton>
                 <div className="flex items-center gap-2">
@@ -199,7 +200,7 @@ export default async function HomePage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="bg-bg-subtle">
+      <section id="contact" className="scroll-mt-20 bg-bg-subtle">
         <div className={SECTION}>
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
@@ -207,10 +208,13 @@ export default async function HomePage({ params }: PageProps) {
                 {t.home.contactTitle}
               </h2>
               <p className="mt-2 text-ink-muted">{t.home.contactText}</p>
+              <div className="mt-5">
+                <CopyEmail email={t.profile.email} copyLabel={t.home.copyEmail} copiedLabel={t.home.copied} />
+              </div>
             </div>
             <div className="flex shrink-0 flex-wrap items-center gap-3 md:flex-nowrap">
               <LinkButton href={`mailto:${t.profile.email}`} variant="primary">
-                {t.home.contactMe}
+                {t.home.sendEmail}
               </LinkButton>
               <LinkButton href={t.resumePdf} download variant="ghost">
                 {t.home.downloadResume}
@@ -238,7 +242,7 @@ function IconLink({ href, label, children }: { href: string; label: string; chil
       rel="noopener noreferrer"
       aria-label={label}
       title={label}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-ink-muted transition-colors hover:border-accent hover:text-accent"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-ink-muted transition-colors hover:border-accent hover:bg-bg-subtle hover:text-accent"
     >
       <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
         {children}
