@@ -2,15 +2,16 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { getSkillCategories } from "@/i18n/skill-categories";
-import { type Project } from "@/data/projects";
 import { buildPageMetadata } from "@/lib/site-metadata";
+import Link from "next/link";
+import { getSkillCategories } from "@/i18n/skill-categories";
+import type { ExperienceEntry } from "@/components/ui/ExperienceCard";
 import PageContainer from "@/components/layout/PageContainer";
 import SectionHeader from "@/components/ui/SectionHeader";
-import ExperienceCard from "@/components/ui/ExperienceCard";
 import SkillsGrid from "@/components/ui/SkillsGrid";
 import Tag from "@/components/ui/Tag";
 import LinkButton from "@/components/ui/LinkButton";
+import ContactSection from "@/components/ContactSection";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -38,98 +39,107 @@ export default async function ResumePage({ params }: PageProps) {
 
   const t = getDictionary(locale);
   const skillCategories = getSkillCategories(locale as Locale);
+  const mainPdf = locale === "fr" ? "/resume-fr.pdf" : "/resume-en.pdf";
+  const otherPdf = locale === "fr" ? "/resume-en.pdf" : "/resume-fr.pdf";
+  const mainLabel = locale === "fr" ? t.resume.downloadFr : t.resume.downloadEn;
+  const otherLabel = locale === "fr" ? t.resume.downloadEn : t.resume.downloadFr;
 
   return (
-    <PageContainer>
-      <SectionHeader
-        label={t.resume.label}
-        title={t.resume.title}
-        subtitle={t.resume.subtitle}
-        action={
-          <div className="flex flex-wrap gap-2">
-            <LinkButton href="/resume-en.pdf" download variant="ghost">
-              {t.resume.downloadEn}
-            </LinkButton>
-            <LinkButton href="/resume-fr.pdf" download variant="ghost">
-              {t.resume.downloadFr}
-            </LinkButton>
-          </div>
-        }
-      />
+    <>
+      <PageContainer>
+        <SectionHeader label={t.resume.label} title={t.resume.title} subtitle={t.resume.subtitle} />
 
-      <div className="space-y-14">
-        <ResumeSection title={t.resume.experience}>
-          {t.experience.map((entry) => (
-            <ExperienceCard key={`${entry.role}-${entry.company}`} {...entry} />
-          ))}
-        </ResumeSection>
-
-        <ResumeSection title={t.resume.education}>
-          {t.education.map((entry) => (
-            <ExperienceCard key={`${entry.role}-${entry.company}`} {...entry} />
-          ))}
-        </ResumeSection>
-
-        <ResumeSection title={t.resume.projects}>
-          {t.projects.map((project) => (
-            <ProjectRow key={project.id} project={project} liveLabel={t.resume.live} />
-          ))}
-        </ResumeSection>
-
-        <ResumeSection title={t.resume.skills}>
-          <SkillsGrid categories={skillCategories} />
-        </ResumeSection>
-      </div>
-    </PageContainer>
-  );
-}
-
-function ResumeSection({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div>
-      <h2 className="mb-1 text-xs font-semibold uppercase tracking-widest text-ink-muted">
-        {title}
-      </h2>
-      <div className="mb-5 h-px w-8 bg-accent" />
-      <div className="border-l border-border pl-6">{children}</div>
-    </div>
-  );
-}
-
-function ProjectRow({ project, liveLabel }: { project: Project; liveLabel: string }) {
-  return (
-    <div className="mb-5 last:mb-0">
-      <div className="mb-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <span className="font-medium text-ink">{project.title}</span>
-        <div className="flex gap-4 text-xs">
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ink-muted underline underline-offset-2 transition-colors hover:text-ink"
-            >
-              GitHub
-            </a>
-          )}
-          {project.url && (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ink-muted underline underline-offset-2 transition-colors hover:text-ink"
-            >
-              {liveLabel}
-            </a>
-          )}
+        <div className="-mt-4 mb-14 flex flex-wrap gap-3">
+          <LinkButton href={mainPdf} download variant="primary">
+            ↓ {mainLabel}
+          </LinkButton>
+          <LinkButton href={otherPdf} download variant="ghost">
+            ↓ {otherLabel}
+          </LinkButton>
         </div>
-      </div>
-      <p className="mb-2 text-sm text-ink-muted">{project.description}</p>
-      <div className="flex flex-wrap gap-1.5">
-        {project.stack.map((tech) => (
-          <Tag key={tech} label={tech} />
-        ))}
-      </div>
-    </div>
+
+        <section className="mb-14">
+          <h2 className={LABEL}>{t.resume.experience}</h2>
+          <Timeline entries={t.experience} />
+        </section>
+
+        <section className="mb-14">
+          <h2 className={LABEL}>{t.resume.education}</h2>
+          <Timeline entries={t.education} />
+        </section>
+
+        <section className="mb-14">
+          <h2 className={LABEL}>{t.resume.projects}</h2>
+          <ul className="divide-y divide-border rounded-2xl border border-border">
+            {t.projects.map((project) => (
+              <li key={project.id}>
+                <Link
+                  href={`/${locale}/projects#${project.id}`}
+                  className="group flex flex-col gap-3 px-6 py-5 transition-colors hover:bg-bg-subtle md:flex-row md:items-center md:justify-between"
+                >
+                  <div>
+                    <p className="font-semibold text-ink transition-colors group-hover:text-accent">{project.title}</p>
+                    <p className="mt-1 text-sm text-ink-muted">{project.description}</p>
+                  </div>
+                  <span className="shrink-0 text-sm font-medium text-accent">{t.resume.seeProject}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mb-14">
+          <h2 className={LABEL}>{t.resume.skills}</h2>
+          <SkillsGrid categories={skillCategories} compact />
+        </section>
+
+        <section>
+          <h2 className={LABEL}>{t.about.languages}</h2>
+          <div className="flex flex-wrap gap-2">
+            {t.profile.spokenLanguages.map(({ name, level }) => (
+              <Tag key={name} label={`${name} · ${level}`} />
+            ))}
+          </div>
+        </section>
+      </PageContainer>
+      <ContactSection t={t} />
+    </>
   );
 }
+
+/** Vertical timeline; each sentence of the description becomes a bullet point. */
+function Timeline({ entries }: { entries: ExperienceEntry[] }) {
+  return (
+    <ol className="relative space-y-10 border-l border-border pl-8">
+      {entries.map((entry) => (
+        <li key={`${entry.company}-${entry.period}`} className="relative">
+          <span
+            aria-hidden="true"
+            className="absolute -left-[37px] top-1.5 h-3 w-3 rounded-full border-2 border-bg bg-accent ring-1 ring-border"
+          />
+          <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
+            <p className="text-lg font-semibold text-ink">
+              {entry.company}
+              <span className="font-normal text-ink-muted"> · {entry.role}</span>
+            </p>
+            <p className="shrink-0 text-sm text-ink-light">{entry.period}</p>
+          </div>
+          <ul className="mt-3 space-y-2">
+            {splitSentences(entry.description).map((sentence) => (
+              <li key={sentence} className="flex gap-3 leading-relaxed text-ink-muted">
+                <span aria-hidden="true" className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-ink-light" />
+                <span>{sentence}</span>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function splitSentences(text: string): string[] {
+  return text.split(/(?<=\.)\s+(?=[A-ZÀ-Ý])/).map((s) => s.trim()).filter(Boolean);
+}
+
+const LABEL = "mb-6 text-xs font-semibold tracking-[0.15em] text-ink-light uppercase";

@@ -28,6 +28,11 @@ export const fr: Dictionary = {
       description:
         "Ma façon de travailler, ce que j'aime construire et ce que je recherche.",
     },
+    contact: {
+      title: "Contact — Ayoub Hassain",
+      description:
+        "Contacter Ayoub Hassain, ingénieur full stack et DevOps, disponible à partir de novembre 2026.",
+    },
   },
   nav: {
     about:     "À propos",
@@ -88,20 +93,35 @@ export const fr: Dictionary = {
   },
   resume: {
     label:      "CV",
-    title:      "CV",
+    title:      "Mon parcours",
     subtitle:   "Expérience, formation, projets et compétences.",
     experience: "Expérience",
     education:  "Formation",
     projects:   "Projets",
     skills:     "Compétences",
-    downloadEn: "↓ EN",
-    downloadFr: "↓ FR",
+    downloadEn: "CV en anglais (PDF)",
+    downloadFr: "CV en français (PDF)",
     live:       "Démo",
+    seeProject: "Voir le projet →",
   },
   qandaPage: {
     label:    "Q&R",
     title:    "Questions & Réponses",
     subtitle: "Les questions que les recruteurs me posent souvent, et mes réponses.",
+  },
+  contactPage: {
+    label:        "Contact",
+    title:        "Travaillons ensemble.",
+    subtitle:     "Je suis disponible pour un CDI full stack ou DevOps à partir de novembre 2026. Le plus simple pour me joindre : par email ou sur LinkedIn.",
+    emailTitle:   "Email",
+    emailText:    "Écrivez-moi directement, ou copiez l'adresse.",
+    linkedinText: "Mon profil professionnel et mon parcours.",
+    githubText:   "Le code de mes projets.",
+    resumeTitle:  "CV",
+    resumeText:   "Une page, en français ou en anglais.",
+    lookingTitle: "Ce que je recherche",
+    looking: ["Un CDI", "Développeur full stack ou ingénieur DevOps", "À partir de novembre 2026", "Basé à Paris"],
+    open:         "Ouvrir",
   },
   projectCard: {
     problem:  "L'objectif",

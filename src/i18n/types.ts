@@ -8,6 +8,7 @@ export type Dictionary = {
     projects: { title: string; description: string };
     resume: { title: string; description: string };
     qanda: { title: string; description: string };
+    contact: { title: string; description: string };
   };
   nav: {
     about: string;
@@ -67,11 +68,26 @@ export type Dictionary = {
     downloadEn: string;
     downloadFr: string;
     live: string;
+    seeProject: string;
   };
   qandaPage: {
     label: string;
     title: string;
     subtitle: string;
+  };
+  contactPage: {
+    label: string;
+    title: string;
+    subtitle: string;
+    emailTitle: string;
+    emailText: string;
+    linkedinText: string;
+    githubText: string;
+    resumeTitle: string;
+    resumeText: string;
+    lookingTitle: string;
+    looking: string[];
+    open: string;
   };
   projectCard: {
     problem: string;

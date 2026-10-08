@@ -35,6 +35,11 @@ export const en: Dictionary = {
       description:
         "How I work, what I enjoy building, and what I'm looking for next.",
     },
+    contact: {
+      title: "Contact — Ayoub Hassain",
+      description:
+        "Get in touch with Ayoub Hassain, full stack and DevOps engineer, available from November 2026.",
+    },
   },
   nav: {
     about:     "About",
@@ -95,20 +100,35 @@ export const en: Dictionary = {
   },
   resume: {
     label:      "Resume",
-    title:      "Resume",
+    title:      "My background",
     subtitle:   "Experience, education, projects and skills.",
     experience: "Experience",
     education:  "Education",
     projects:   "Projects",
     skills:     "Skills",
-    downloadEn: "↓ EN",
-    downloadFr: "↓ FR",
+    downloadEn: "Resume in English (PDF)",
+    downloadFr: "Resume in French (PDF)",
     live:       "Live",
+    seeProject: "See the project →",
   },
   qandaPage: {
     label:    "Q&A",
     title:    "Q&A",
     subtitle: "Questions recruiters often ask me, and my answers.",
+  },
+  contactPage: {
+    label:        "Contact",
+    title:        "Let's work together.",
+    subtitle:     "I'm available for a full-time full stack or DevOps role from November 2026. The quickest way to reach me is by email or on LinkedIn.",
+    emailTitle:   "Email",
+    emailText:    "Write to me directly, or copy the address.",
+    linkedinText: "My professional profile and experience.",
+    githubText:   "The code of my projects.",
+    resumeTitle:  "Resume",
+    resumeText:   "One page, in English or French.",
+    lookingTitle: "What I'm looking for",
+    looking: ["A full-time position (CDI)", "Full stack developer or DevOps engineer", "Available from November 2026", "Based in Paris"],
+    open:         "Open",
   },
   projectCard: {
     problem:  "Goal",

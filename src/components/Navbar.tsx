@@ -18,7 +18,7 @@ export default function Navbar({ locale }: NavbarProps) {
     { href: `/${locale}/projects`,  label: t.nav.projects },
     { href: `/${locale}/resume`,    label: t.nav.resume },
     { href: `/${locale}/interview`, label: t.nav.qanda },
-    { href: `/${locale}#contact`,   label: t.nav.contact },
+    { href: `/${locale}/contact`,   label: t.nav.contact },
   ];
 
   return (
