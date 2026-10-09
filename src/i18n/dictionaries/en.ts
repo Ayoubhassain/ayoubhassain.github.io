@@ -239,14 +239,14 @@ export const en: Dictionary = {
     {
       id: "ecommerce-fullstack",
       title: "E-commerce Platform",
-      description: "A Spring Boot and Angular shop that I extended with JWT authentication, an admin area and integration tests.",
+      description: "An online shop in Spring Boot and Angular: catalog, cart, orders, JWT authentication and an admin area.",
       problem:
-        "Start from an existing e-commerce base (catalog, cart, checkout) and turn it into an application closer to production: user accounts, roles, an admin back office, and an API that does not trust the browser.",
+        "Build a complete online shop, close to a production application: catalog, cart, orders, user accounts, roles, an admin back office, and an API that does not trust the browser.",
       solution:
-        "I added sign up and login with Spring Security and JWT (BCrypt, USER and ADMIN roles), an admin area to manage products and orders, a My orders page, server-side price calculation at checkout, closed data that Spring Data REST exposed publicly, and integration tests with MockMvc and H2. MySQL runs with Docker Compose.",
+        "Catalog with search and pagination, cart and checkout, sign up and login with Spring Security and JWT (BCrypt, USER and ADMIN roles), an admin area to manage products and orders, a My orders page, server-side price calculation at checkout, sensitive data kept out of the API, and integration tests with MockMvc and H2. MySQL runs with Docker Compose.",
       learned:
         "Security has to live on the backend: the Angular guard only hides pages, while the JWT filter and the role rules decide what the API allows.",
-      kind: "course",
+      kind: "personal",
       category: "dev",
       metrics: [{ value: "JWT", label: "USER and ADMIN roles" }, { value: "7", label: "admin API routes" }, { value: "11", label: "integration tests" }],
       image: "/projects/ecommerce-fullstack.png",

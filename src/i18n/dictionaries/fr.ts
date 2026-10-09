@@ -232,14 +232,14 @@ export const fr: Dictionary = {
     {
       id: "ecommerce-fullstack",
       title: "Plateforme e-commerce",
-      description: "Une boutique Spring Boot et Angular que j'ai enrichie d'une authentification JWT, d'un espace admin et de tests d'intégration.",
+      description: "Une boutique en ligne en Spring Boot et Angular : catalogue, panier, commandes, authentification JWT et espace admin.",
       problem:
-        "Partir d'une base e-commerce existante (catalogue, panier, commande) et la rapprocher d'une application de production : comptes utilisateurs, rôles, back-office d'administration, et une API qui ne fait pas confiance au navigateur.",
+        "Construire une boutique en ligne complète et proche d'une application de production : catalogue, panier, commandes, comptes utilisateurs, rôles, back-office d'administration, et une API qui ne fait pas confiance au navigateur.",
       solution:
-        "J'ai ajouté l'inscription et la connexion avec Spring Security et JWT (BCrypt, rôles USER et ADMIN), un espace admin pour gérer produits et commandes, une page « Mes commandes », le calcul des prix côté serveur à la commande, la fermeture de données que Spring Data REST exposait publiquement, et des tests d'intégration avec MockMvc et H2. MySQL tourne avec Docker Compose.",
+        "Catalogue avec recherche et pagination, panier et commande, inscription et connexion avec Spring Security et JWT (BCrypt, rôles USER et ADMIN), un espace admin pour gérer produits et commandes, une page « Mes commandes », le calcul des prix côté serveur à la commande, des données sensibles non exposées par l'API, et des tests d'intégration avec MockMvc et H2. MySQL tourne avec Docker Compose.",
       learned:
         "La sécurité se joue côté backend : le guard Angular ne fait que cacher des pages, ce sont le filtre JWT et les règles de rôles qui décident de ce que l'API autorise.",
-      kind: "course",
+      kind: "personal",
       category: "dev",
       metrics: [{ value: "JWT", label: "rôles USER et ADMIN" }, { value: "7", label: "routes API admin" }, { value: "11", label: "tests d'intégration" }],
       image: "/projects/ecommerce-fullstack.png",
