@@ -13,8 +13,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Default metadata, used by the root URL when the link is shared (LinkedIn, WhatsApp, email).
+// Each page overrides the title and description.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  title: "Ayoub Hassain — Full Stack & DevOps",
+  description: "Ingénieur full stack et DevOps diplômé de l'ENSEEIHT, basé à Paris. Angular, Node.js, Java/Spring Boot, Docker, Kubernetes.",
+  openGraph: {
+    title: "Ayoub Hassain — Full Stack & DevOps",
+    description: "Ingénieur full stack et DevOps diplômé de l'ENSEEIHT, basé à Paris.",
+    url: SITE_URL,
+    type: "website",
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image", images: [`${SITE_URL}/og-image.png`] },
 };
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(t!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark")}catch(e){}})();`;
