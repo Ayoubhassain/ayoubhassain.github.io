@@ -243,7 +243,7 @@ export const en: Dictionary = {
       problem:
         "Start from an existing e-commerce base (catalog, cart, checkout) and turn it into an application closer to production: user accounts, roles, an admin back office, and an API that does not trust the browser.",
       solution:
-        "Built on the project from the online course “Full Stack: Angular and Spring Boot” by luv2code. I added sign up and login with Spring Security and JWT (BCrypt, USER and ADMIN roles), an admin area to manage products and orders, a My orders page, server-side price calculation at checkout, closed data that Spring Data REST exposed publicly, and integration tests with MockMvc and H2. MySQL runs with Docker Compose.",
+        "I added sign up and login with Spring Security and JWT (BCrypt, USER and ADMIN roles), an admin area to manage products and orders, a My orders page, server-side price calculation at checkout, closed data that Spring Data REST exposed publicly, and integration tests with MockMvc and H2. MySQL runs with Docker Compose.",
       learned:
         "Security has to live on the backend: the Angular guard only hides pages, while the JWT filter and the role rules decide what the API allows.",
       kind: "course",
