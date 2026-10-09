@@ -145,7 +145,7 @@ export const fr: Dictionary = {
     details:      "Voir le détail",
     hideDetails:  "Masquer le détail",
     architecture: "Architecture",
-    kinds: { personal: "Projet personnel", team: "Projet d'équipe · ENSEEIHT", course: "Extension d'un projet de cours" },
+    kinds: { personal: "Projet personnel", team: "Projet d'équipe · ENSEEIHT", course: "Basé sur une formation en ligne" },
   },
   profile: {
     name:     "Ayoub Hassain",
@@ -236,7 +236,7 @@ export const fr: Dictionary = {
       problem:
         "Partir d'une base e-commerce existante (catalogue, panier, commande) et la rapprocher d'une application de production : comptes utilisateurs, rôles, back-office d'administration, et une API qui ne fait pas confiance au navigateur.",
       solution:
-        "Basé sur le projet du cours luv2code. J'ai ajouté l'inscription et la connexion avec Spring Security et JWT (BCrypt, rôles USER et ADMIN), un espace admin pour gérer produits et commandes, une page « Mes commandes », le calcul des prix côté serveur à la commande, la fermeture de données que Spring Data REST exposait publiquement, et des tests d'intégration avec MockMvc et H2. MySQL tourne avec Docker Compose.",
+        "Basé sur le projet de la formation en ligne « Full Stack: Angular and Spring Boot » de luv2code. J'ai ajouté l'inscription et la connexion avec Spring Security et JWT (BCrypt, rôles USER et ADMIN), un espace admin pour gérer produits et commandes, une page « Mes commandes », le calcul des prix côté serveur à la commande, la fermeture de données que Spring Data REST exposait publiquement, et des tests d'intégration avec MockMvc et H2. MySQL tourne avec Docker Compose.",
       learned:
         "La sécurité se joue côté backend : le guard Angular ne fait que cacher des pages, ce sont le filtre JWT et les règles de rôles qui décident de ce que l'API autorise.",
       kind: "course",
