@@ -83,7 +83,7 @@ export const fr: Dictionary = {
       { kind: "work", period: "2026", place: "Paris", title: "Padoa", text: "Stage de fin d'études full stack / DevOps sur un SaaS de santé au travail en production." },
       { kind: "work", period: "2025", place: "Oujda", title: "Banque Centrale Populaire", text: "Stage full stack : application de gestion des chèques en Spring Boot et Angular." },
       { kind: "work", period: "2024", place: "Oujda", title: "SQLI", text: "Stage front-end : interfaces Angular et TypeScript pour une application RH." },
-      { kind: "education", period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Diplôme d'ingénieur, génie logiciel : Java, C++, conception objet, bases de données, réseaux, cloud." },
+      { kind: "education", period: "2023 – 2026", place: "Toulouse", title: "ENSEEIHT", text: "Diplôme d'ingénieur, génie logiciel : Java, conception objet, bases de données, réseaux, cloud." },
       { kind: "education", period: "2021 – 2023", place: "Benguérir", title: "Classes préparatoires", text: "MPSI puis MP* : deux ans de mathématiques et de physique intensives." },
     ],
     workTitle:      "Ce que je fais",
@@ -201,7 +201,7 @@ export const fr: Dictionary = {
       company: "Toulouse INP – ENSEEIHT",
       period: "2023 – 2026",
       description:
-        "Génie logiciel : Java, C++, conception orientée objet, bases de données, réseaux, cloud.",
+        "Génie logiciel : Java, conception orientée objet, bases de données, réseaux, cloud.",
     },
     {
       role: "Classes préparatoires MPSI – MP*",
