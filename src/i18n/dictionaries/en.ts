@@ -82,7 +82,7 @@ export const en: Dictionary = {
     skills:         "Skills",
     languages:      "Languages",
     intro:
-      "Software engineer, graduated from ENSEEIHT (Toulouse INP). I did three internships in web development, the latest at Padoa on a SaaS in production. I'm also interested in AI and how it is changing software development.",
+      "Software engineer from ENSEEIHT (Toulouse INP), I enjoy building useful applications, from the code all the way to production. Most recently at Padoa, I worked on a SaaS platform used every day, across Angular, Node.js, CI/CD and Kubernetes. I'm also interested in how AI is changing the way we build software.",
     quick: ["Based in Paris", "French, English (C1), German (A2)"],
     journeyTitle:   "My path",
     journey: [

@@ -75,7 +75,7 @@ export const fr: Dictionary = {
     skills:         "Compétences",
     languages:      "Langues",
     intro:
-      "Ingénieur en génie logiciel, diplômé de l'ENSEEIHT (Toulouse INP). J'ai fait trois stages en développement web, le dernier chez Padoa sur un SaaS en production. Je m'intéresse aussi à l'IA et à la façon dont elle change le développement logiciel.",
+      "Ingénieur en génie logiciel diplômé de l'ENSEEIHT (Toulouse INP), j'aime concevoir des applications utiles, du code jusqu'à la mise en production. Dernièrement chez Padoa, j'ai fait évoluer une plateforme SaaS utilisée au quotidien, entre Angular, Node.js, CI/CD et Kubernetes. Je m'intéresse aussi à la façon dont l'IA change notre manière de développer.",
     quick: ["Basé à Paris", "Français, anglais (C1), allemand (A2)"],
     journeyTitle:   "Mon parcours",
     journey: [
