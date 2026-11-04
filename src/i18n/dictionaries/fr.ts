@@ -173,26 +173,26 @@ export const fr: Dictionary = {
     {
       role: "Développeur Full Stack / DevOps — stage de fin d'études",
       company: "Padoa",
-      summary: "Full stack et DevOps sur un SaaS de santé au travail en production : Angular, Node.js, Playwright, Kubernetes.",
+      summary: "Full stack et DevOps sur un SaaS de santé au travail en production : migration de 355 000 lignes, interface Angular, tests Playwright.",
       period: "Mars 2026 – Sept. 2026",
       description:
-        "Nouvelles fonctionnalités d'une plateforme SaaS de santé au travail en production (Angular/RxJS, TypeScript, Node.js/Express, PostgreSQL), en équipe Agile/Scrum. Migration des formes juridiques vers le système de listes de référence : évolution du modèle de données, adaptation backend/frontend et reprise des données via scripts SQL. Interface de gestion de modèles de devis Word. Tests E2E Playwright sur les parcours métier (fixtures, Page Objects). CI/CD avec GitHub Actions, Docker et déploiement Kubernetes via Helm et Argo CD. Revues de code et correction d'anomalies en production (logs, Prometheus/Grafana).",
+        "Dans une équipe Agile de six développeurs, j'ai fait évoluer une plateforme SaaS de santé au travail utilisée chaque jour (Node.js 22, Angular 20, TypeScript, PostgreSQL). Formes juridiques : saisies en texte libre, elles étaient incohérentes ; je les ai migrées vers le système de listes de référence (modèle de données, backend, frontend), puis reprises en production par script SQL : 355 000 lignes, sans aucune perte. Modèles de devis : j'ai développé l'interface Angular pour rechercher, consulter, télécharger, supprimer et tester les modèles Word des devis commerciaux. Tests E2E : j'ai migré la suite Cypress vers Playwright sur trois périmètres métier (fixtures, Page Objects), pour améliorer les performances des tests. Maintenance corrective : correction de bugs en production avec les équipes produit et QA, revues de code, CI/CD avec GitHub Actions, Docker et Kubernetes.",
     },
     {
       role: "Développeur Full Stack — stage",
       company: "Banque Centrale Populaire",
-      summary: "Application de gestion des chèques pour l'équipe comptabilité, en Spring Boot et Angular.",
+      summary: "Application de gestion des chèques pour l'équipe comptabilité : un traitement trois fois plus rapide.",
       period: "Juin 2025 – Sept. 2025",
       description:
-        "Conception et développement d'une application de gestion des chèques pour l'équipe comptabilité de la banque, avec un backend Java/Spring Boot et un frontend Angular. Création, recherche, modification et suivi des chèques, avec scan, impression calibrée et montants en lettres. API REST, persistance MySQL avec JPA/Hibernate, intégration continue (tests, build Maven, image Docker) et déploiement sur serveur (Tomcat/Nginx).",
+        "Besoin : les comptables remplissaient à la main des centaines de chèques par mois, lentement et avec des erreurs. Solution : j'ai conçu et développé une application (Java 17, Spring Boot, Angular, MySQL) qui remplit et imprime les chèques directement dans l'imprimante, avec les montants en lettres, puis les scanne et les archive. Résultat : un traitement trois fois plus rapide et des chèques retrouvés en quelques secondes. Intégration continue (tests JUnit, build Maven, image Docker) et déploiement sur serveur.",
     },
     {
       role: "Développeur Front-End — stage",
       company: "SQLI",
-      summary: "Interfaces Angular pour une application RH interne.",
+      summary: "Formulaire et affichage des candidatures pour l'équipe RH, en Angular.",
       period: "Juil. 2024 – Sept. 2024",
       description:
-        "Interfaces Angular/TypeScript pour une application RH interne : formulaires, affichage dynamique et intégration d'API REST. Participation aux tests, corrections d'anomalies et évolutions fonctionnelles au sein de l'équipe projet.",
+        "Dans une équipe de stagiaires encadrée par un développeur senior, j'ai développé en Angular 16 et TypeScript le formulaire de candidature et l'affichage des candidatures pour l'équipe RH, en intégrant l'API REST.",
     },
   ],
   education: [
@@ -226,7 +226,7 @@ export const fr: Dictionary = {
       category: "devops",
       metrics: [{ value: "5", label: "VM provisionnées" }, { value: "28 s → 19 s", label: "de 1 à 2 cœurs" }, { value: "6", label: "playbooks Ansible" }],
       image: "/projects/spark-cluster-gcp.png",
-      stack: ["GCP", "Terraform", "Ansible", "Apache Spark", "NFS", "Linux"],
+      stack: ["GCP", "Terraform", "Ansible", "Apache Spark", "Java 11", "NFS", "Linux"],
       github: links.github + "/spark-cluster-gcp",
     },
     {
@@ -243,7 +243,7 @@ export const fr: Dictionary = {
       category: "dev",
       metrics: [{ value: "JWT", label: "rôles USER et ADMIN" }, { value: "7", label: "routes API admin" }, { value: "11", label: "tests d'intégration" }],
       image: "/projects/ecommerce-fullstack.png",
-      stack: ["Java", "Spring Boot", "Spring Security", "JWT", "Angular", "MySQL", "Docker"],
+      stack: ["Java 17", "Spring Boot", "Angular 14", "Spring Security", "JWT", "MySQL", "Docker"],
       github: links.github + "/ecommerce-fullstack",
     },
     {
@@ -260,7 +260,7 @@ export const fr: Dictionary = {
       category: "dev",
       metrics: [{ value: "6", label: "routes REST" }, { value: "JWT", label: "+ mots de passe bcrypt" }, { value: "5", label: "champs validés" }],
       image: "/projects/pokemon-rest-api.png",
-      stack: ["Node.js", "Express", "Sequelize", "MariaDB", "JWT", "bcrypt"],
+      stack: ["Node.js 18", "Express", "Sequelize", "MariaDB", "JWT", "bcrypt"],
       github: links.github + "/pokemon-rest-api",
     },
     {

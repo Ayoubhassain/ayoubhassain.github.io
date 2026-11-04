@@ -180,26 +180,26 @@ export const en: Dictionary = {
     {
       role: "Full Stack / DevOps Engineer — final-year internship",
       company: "Padoa",
-      summary: "Full stack and DevOps on an occupational-health SaaS in production: Angular, Node.js, Playwright, Kubernetes.",
+      summary: "Full stack and DevOps on an occupational-health SaaS in production: 355,000-row migration, Angular interface, Playwright tests.",
       period: "Mar 2026 – Sep 2026",
       description:
-        "New features on a production occupational-health SaaS platform (Angular/RxJS, TypeScript, Node.js/Express, PostgreSQL), in an Agile/Scrum team. Migrated legal forms to the reference-list system: data model changes, back-end and front-end updates, and data migration with SQL scripts. Built an interface to manage Word quote templates. Wrote Playwright end-to-end tests on business workflows (fixtures, Page Objects). Worked on CI/CD with GitHub Actions, Docker, and Kubernetes deployment with Helm and Argo CD. Code reviews and production bug fixing with logs and Prometheus/Grafana.",
+        "In an Agile team of six developers, I evolved an occupational-health SaaS platform used every day (Node.js 22, Angular 20, TypeScript, PostgreSQL). Legal forms: stored as free text, they were inconsistent; I migrated them to the reference-list system (data model, back end, front end), then migrated the production data with an SQL script: 355,000 rows, no data loss. Quote templates: I built the Angular interface to search, view, download, delete and test the Word templates used for sales quotes. E2E tests: I migrated the Cypress suite to Playwright across three business areas (fixtures, Page Objects) to improve test performance. Bug fixing: fixed production bugs with the product and QA teams, code reviews, CI/CD with GitHub Actions, Docker and Kubernetes.",
     },
     {
       role: "Full Stack Developer — internship",
       company: "Banque Centrale Populaire",
-      summary: "Built a cheque management application for the accounting team, in Spring Boot and Angular.",
+      summary: "Cheque management application for the accounting team: three times faster processing.",
       period: "Jun 2025 – Sep 2025",
       description:
-        "Designed and built a cheque management application for the bank's accounting team, with a Java/Spring Boot back end and an Angular front end. Creation, search, editing and tracking of cheques, with scanning, calibrated printing and amounts written in words. REST API, MySQL persistence with JPA/Hibernate, continuous integration (tests, Maven build, Docker image) and server deployment (Tomcat/Nginx).",
+        "Need: accountants filled in hundreds of cheques by hand every month, slowly and with errors. Solution: I designed and built an application (Java 17, Spring Boot, Angular, MySQL) that fills in and prints the cheques directly in the printer, with amounts written in words, then scans and archives them. Result: three times faster processing, and any cheque found in seconds. Continuous integration (JUnit tests, Maven build, Docker image) and server deployment.",
     },
     {
       role: "Front-End Developer — internship",
       company: "SQLI",
-      summary: "Angular interfaces for an internal HR application.",
+      summary: "Application form and applicant list for the HR team, in Angular.",
       period: "Jul 2024 – Sep 2024",
       description:
-        "Angular/TypeScript interfaces for an internal HR application: forms, dynamic views and REST API integration. Took part in testing, bug fixing and feature changes within the project team.",
+        "In a team of interns supervised by a senior developer, I built the application form and the applicant list for the HR team with Angular 16 and TypeScript, connected to the REST API.",
     },
   ],
   education: [
@@ -233,7 +233,7 @@ export const en: Dictionary = {
       category: "devops",
       metrics: [{ value: "5", label: "VMs provisioned" }, { value: "28 s → 19 s", label: "from 1 to 2 cores" }, { value: "6", label: "Ansible playbooks" }],
       image: "/projects/spark-cluster-gcp.png",
-      stack: ["GCP", "Terraform", "Ansible", "Apache Spark", "NFS", "Linux"],
+      stack: ["GCP", "Terraform", "Ansible", "Apache Spark", "Java 11", "NFS", "Linux"],
       github: links.github + "/spark-cluster-gcp",
     },
     {
@@ -250,7 +250,7 @@ export const en: Dictionary = {
       category: "dev",
       metrics: [{ value: "JWT", label: "USER and ADMIN roles" }, { value: "7", label: "admin API routes" }, { value: "11", label: "integration tests" }],
       image: "/projects/ecommerce-fullstack.png",
-      stack: ["Java", "Spring Boot", "Spring Security", "JWT", "Angular", "MySQL", "Docker"],
+      stack: ["Java 17", "Spring Boot", "Angular 14", "Spring Security", "JWT", "MySQL", "Docker"],
       github: links.github + "/ecommerce-fullstack",
     },
     {
@@ -267,7 +267,7 @@ export const en: Dictionary = {
       category: "dev",
       metrics: [{ value: "6", label: "REST routes" }, { value: "JWT", label: "+ bcrypt passwords" }, { value: "5", label: "validated fields" }],
       image: "/projects/pokemon-rest-api.png",
-      stack: ["Node.js", "Express", "Sequelize", "MariaDB", "JWT", "bcrypt"],
+      stack: ["Node.js 18", "Express", "Sequelize", "MariaDB", "JWT", "bcrypt"],
       github: links.github + "/pokemon-rest-api",
     },
     {
